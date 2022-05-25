@@ -1,0 +1,90 @@
+@charset "UTF-8"; 
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+  --bg-color: #141D2F;
+  --card-color: #1E2A47;
+  --icon-color: #304988;
+  --text-color: #fff;
+  --bla2: #1F2A41;
+  --bla: #0079FF;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Space Mono', monospace;
+  color: #fff;
+  background-color: var(--bg-color);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100vw;
+  height: 100vh;
+}
+
+.user-search {
+  display: flex;
+  justify-content: space-evenly;
+  width: 730px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: var(--card-color);
+}
+
+.profile-card {
+  display: flex;
+  gap: 20px;
+  width: 730px;
+  padding: 20px;
+  border-radius: 14px;
+  background-color: var(--card-color);
+}
+
+.profile-photo {
+  width: 180px;
+  border-radius: 50%;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.profile-connections {
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--bg-color);
+  padding: 25px;
+  border-radius: 14px;
+}
+
+.profile-repos, .profile-followers, .profile-following {
+  display: flex;
+  gap: 5px;
+}
+
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 25px;
+  border-radius: 6px;
+  background-color: var(--bla2);
+  color: var(--bla);
+}
+
+
+
