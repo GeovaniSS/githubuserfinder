@@ -11,63 +11,67 @@
 <body>
   <section class="container">
     <div class="user-search">
-      <span class="material-symbols-sharp">search</span>
-      <p>Procure seu perfil no Github...</p>
-      <button>Search</button>
+      <div class="search-field">
+        <span class="material-symbols-sharp">search</span>
+        <input type="search" id="" placeholder="Procure seu perfil no Github...">
+      </div>
+      <button class="search-button">Search</button>
     </div>
 
     <div class="profile-card">
       <img src="https://avatars.githubusercontent.com/u/90160888?v=4" class="profile-photo" alt="Foto do perfil Github">
 
-      <div class="profile-info">
-        <h1>Geovani Silva</h1>
-        <h5>@geonivass</h5>
-        <p>Desenvolvedor de software, entusiasta de segurança cibernética e das melhores tecnologias de desenvolvimento web</p>
+      <div class="profile-content">
+        <div>
+          <h1 id="name"></h1>
+          <h4 id="login"></h4>
+        </div>
 
-        <div class="profile-connections">
+        <p id="bio"></p>
+
+        <div class="profile-stats">
           <div class="profile-repos">
             <span>Repositórios</span>
-            <div class="circle">21</div>
+            <div id="repos" class="circle"></div>
           </div>
 
           <div class="profile-followers">
             <span>Seguidores</span>
-            <div class="circle">29</div>
+            <div id="followers" class="circle"></div>
           </div>
 
           <div class="profile-following">
             <span>Seguindo</span>
-            <div class="circle">42</div>
+            <div id="following" class="circle"></div>
           </div>
         </div>
 
-        <div class="icons">
-          <div>
+        <div class="profile-info">
+          <div class="icons">
             <img src="./assets/images/icon-location.svg" alt="Ícone da Localização">
-            <span>Brasília-DF</span>
+            <span id="location"></span>
           </div>
 
-          <div>
+          <div class="icons">
             <img src="./assets/images/icon-website.svg" alt="Ícone do WebSite">
-            <span><a href="#">linkedin.com/GeovaniSS</a></span>
+            <span id="blog"></span>
           </div>
 
-          <div>
+          <div class="icons">
             <img src="./assets/images/icon-twitter.svg" alt="Ícone do Twitter">
-            <span>No Twitter</span>
+            <span id="twitter"></span>
           </div>
 
-          <div>
+          <div class="icons">
             <img src="./assets/images/icon-company.svg" alt="Ícone da Empresa">
-            <span>No Company</span>
+            <span id="company"></span>
           </div>
         </div>
       </div>
     </div>
+  </section>
 
-
-  </div>
-
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="./assets/js/main.js"></script>
 </body>
 </html>
