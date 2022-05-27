@@ -26,13 +26,13 @@
   padding: 4px 8px;
 }
 
-.search-button {
+.button-search {
   border-radius: 6px;
   padding: 12px 18px;
   background-color: #0079FF;
 }
 
-.search-button:hover {
+.button-search:hover {
   cursor: pointer;
   background-color: #3390fa;
 }

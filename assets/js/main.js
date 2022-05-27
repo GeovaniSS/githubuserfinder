@@ -1,42 +1,39 @@
-const getGitHubApiUrl = user => `https://api.github.com/users/${user}`
+const userSearch = document.querySelector('#user-search')
+const btnSearch = document.querySelector('.button-search')
+
+const getGitHubUserApi = user => `https://api.github.com/users/${user}`
 
 const fetchGitHubUser = async(user) => {
-  const gitHubResponse = await axios(getGitHubApiUrl(user))
-  const gitHubUser = gitHubResponse.data
-
-  renderUserInfo(gitHubUser)
+  try {
+    const gitHubResponse = await axios(getGitHubUserApi(user))  
+    const gitHubUser = gitHubResponse.data
+  
+    renderGitHubUser(gitHubUser)
+  } catch(e) {
+    alert('Usuário não encontrado')
+    // renderPageWithoutResults()
+  }
 }
 
-const renderUserInfo = gitHubUser => {
-  const name = document.querySelector('#name')
-  name.innerText = gitHubUser.name
+const renderGitHubUser = gitHubUser => {
+  const { avatar_url, name, login, bio, public_repos, followers, following, blog, company, twitter, location } = gitHubUser
 
-  const login = document.querySelector('#login')
-  login.innerText = gitHubUser.login
-
-  const bio = document.querySelector('#bio')
-  bio.innerText = gitHubUser.bio
-
-  const repos = document.querySelector('#repos')
-  repos.innerText = gitHubUser.public_repos
-
-  const followers = document.querySelector('#followers')
-  followers.innerText = gitHubUser.followers
-
-  const following = document.querySelector('#following')
-  following.innerText = gitHubUser.following
-
-  const blog = document.querySelector('#blog')
-  blog.innerText = 'GeovaniSS'
-
-  const company = document.querySelector('#company')
-  company.innerText = 'No Company'
-
-  const location = document.querySelector('#location')
-  location.innerText = gitHubUser.location
-
-  const twitter = document.querySelector('#twitter')
-  twitter.innerText = 'No Twitter'
+  document.querySelector('.profile-photo').src = avatar_url
+  document.querySelector('#name').innerText = name
+  document.querySelector('#login').innerText = login
+  document.querySelector('#bio').innerText = bio
+  document.querySelector('#repos').innerText = public_repos
+  document.querySelector('#followers').innerText = followers
+  document.querySelector('#following').innerText = following
+  document.querySelector('#blog').innerText = 'GeovaniSS'
+  document.querySelector('#company').innerText = 'No Company'
+  document.querySelector('#location').innerText = location
+  document.querySelector('#twitter').innerText = 'No Twitter'
 }
 
 fetchGitHubUser('GeovaniSS')
+
+btnSearch.addEventListener('click', () => fetchGitHubUser(userSearch.value) )
+userSearch.addEventListener('keypress', (e) => {
+  if(e.keyCode === 13) fetchGitHubUser(userSearch.value)
+})
