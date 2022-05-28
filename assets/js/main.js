@@ -16,7 +16,7 @@ const fetchGitHubUser = async(user) => {
 }
 
 const renderGitHubUser = gitHubUser => {
-  const { avatar_url, name, login, bio, public_repos, followers, following, blog, company, twitter, location } = gitHubUser
+  const { avatar_url, name, login, bio, public_repos, followers, following, blog, company, twitter_username, location } = gitHubUser
 
   document.querySelector('.profile-photo').src = avatar_url
   document.querySelector('#name').innerText = name
@@ -25,10 +25,10 @@ const renderGitHubUser = gitHubUser => {
   document.querySelector('#repos').innerText = public_repos
   document.querySelector('#followers').innerText = followers
   document.querySelector('#following').innerText = following
-  document.querySelector('#blog').innerText = 'GeovaniSS'
-  document.querySelector('#company').innerText = 'No Company'
-  document.querySelector('#location').innerText = location
-  document.querySelector('#twitter').innerText = 'No Twitter'
+  document.querySelector('#blog').innerText = blog === null ? 'No Blog': 'GeovaniSS'
+  document.querySelector('#company').innerText = company === null ? 'No Company': company 
+  document.querySelector('#location').innerText = location === null ? 'No Location': location
+  document.querySelector('#twitter').innerText = twitter_username === null ? 'No Twitter': twitter
 }
 
 fetchGitHubUser('GeovaniSS')
