@@ -1,7 +1,12 @@
 const userSearch = document.querySelector('#user-search')
 const btnSearch = document.querySelector('.button-search')
 
+const reposLink = document.querySelector('#repos')
+const followersLink = document.querySelector('#followers')
+const followingLink = document.querySelector('#following')
+
 const getGitHubUserApi = user => `https://api.github.com/users/${user}`
+const getGitHubUserRepos = user => `https://api.github.com/repos/${user}` 
 
 const fetchGitHubUser = async(user) => {
   try {
@@ -19,9 +24,9 @@ const renderGitHubUser = gitHubUser => {
   const { avatar_url, name, login, bio, public_repos, followers, following, blog, company, twitter_username, location } = gitHubUser
 
   document.querySelector('.profile-photo').src = avatar_url
-  document.querySelector('#name').innerText = name
-  document.querySelector('#login').innerText = login
-  document.querySelector('#bio').innerText = bio
+  document.querySelector('#name').innerText = name === null ? 'User' : name
+  document.querySelector('#login').innerText = '@' + login
+  document.querySelector('#bio').innerText = bio === null ? 'This profile has no bio': bio
   document.querySelector('#repos').innerText = public_repos
   document.querySelector('#followers').innerText = followers
   document.querySelector('#following').innerText = following
@@ -33,7 +38,16 @@ const renderGitHubUser = gitHubUser => {
 
 fetchGitHubUser('GeovaniSS')
 
+const fetchGitHubUserRepos = async(user) => {
+  const gitHubResponse = await axios(getGitHubUserRepos(user))
+  const gitHubUserRepos = gitHubResponse.data
+
+  console.log(gitHubUserRepos)
+}
+
+
 btnSearch.addEventListener('click', () => fetchGitHubUser(userSearch.value) )
 userSearch.addEventListener('keypress', (e) => {
   if(e.keyCode === 13) fetchGitHubUser(userSearch.value)
 })
+reposLink.addEventListener('click', () => fetchGitHubUserRepos())

@@ -1,7 +1,9 @@
 .profile-card {
   display: flex;
+  justify-content: space-evenly;
   gap: 25px;
   width: 730px;
+  max-height: 400px;
   padding: 30px;
   border-radius: 15px;
   background-color: var(--card-color);
@@ -23,6 +25,7 @@
 }
 
 .profile-stats {
+  width: 470px;
   display: flex;
   justify-content: space-between;
   background-color: var(--bg-color);
@@ -40,7 +43,6 @@
 .circle {
   display: flex;
   justify-content: center;
-  align-items: center;
   width: 30px;
   height: 25px;
   border-radius: 6px;
@@ -51,7 +53,7 @@
 .profile-info {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 15px;
+  gap: 20px;
   align-items: center;
 }
 
@@ -63,5 +65,5 @@
 
 .icons img {
   width: 20px;
-  height: 18px;
+  height: 20px;
 }
