@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Github User Finder</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+  <section class="container">
+    <div class="user-search">
+      <div class="search-field">
+        <span class="material-symbols-sharp">search</span>
+        <input type="search" id="user-search" placeholder="Procure seu perfil no Github...">
+      </div>
+      <button class="button-search">Search</button>
+    </div>
+
+    <div class="profile-card">
+      <img src="" class="profile-photo" alt="Foto do perfil Github">
+
+      <div class="profile-content">
+        <div>
+          <h1 id="name"></h1>
+          <h4 id="login"></h4>
+        </div>
+
+        <p id="bio"></p>
+
+        <div class="profile-stats">
+          <div class="profile-repos">
+            <span>Repositórios</span>
+            <div id="repos" class="circle"></div>
+          </div>
+
+          <div class="profile-followers">
+            <span>Seguidores</span>
+            <div id="followers" class="circle"></div>
+          </div>
+
+          <div class="profile-following">
+            <span>Seguindo</span>
+            <div id="following" class="circle"></div>
+          </div>
+        </div>
+
+        <div class="profile-info">
+          <div class="icons">
+            <img src="../src/assets/img/icon-location.svg" alt="Ícone da Localização">
+            <span id="location"></span>
+          </div>
+
+          <div class="icons">
+            <img src="../src/assets/img/icon-website.svg" alt="Ícone do WebSite">
+            <span id="blog"></span>
+          </div>
+
+          <div class="icons">
+            <img src="../src/assets/img/icon-twitter.svg" alt="Ícone do Twitter">
+            <span id="twitter"></span>
+          </div>
+
+          <div class="icons">
+            <img src="../src/assets/img/icon-company.svg" alt="Ícone da Empresa">
+            <span id="company"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="./assets/js/bundle.js"></script>
+</body>
+</html>

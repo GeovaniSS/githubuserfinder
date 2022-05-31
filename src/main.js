@@ -1,3 +1,5 @@
+import './assets/css/style.css';
+
 const userSearch = document.querySelector('#user-search')
 const btnSearch = document.querySelector('.button-search')
 
@@ -20,6 +22,13 @@ const fetchGitHubUser = async(user) => {
   }
 }
 
+const fetchGitHubUserRepos = async(user) => {
+  const gitHubResponse = await axios(getGitHubUserRepos(user))
+  const gitHubUserRepos = gitHubResponse.data
+
+  console.log(gitHubUserRepos)
+}
+
 const renderGitHubUser = gitHubUser => {
   const { avatar_url, name, login, bio, public_repos, followers, following, blog, company, twitter_username, location } = gitHubUser
 
@@ -37,14 +46,6 @@ const renderGitHubUser = gitHubUser => {
 }
 
 fetchGitHubUser('GeovaniSS')
-
-const fetchGitHubUserRepos = async(user) => {
-  const gitHubResponse = await axios(getGitHubUserRepos(user))
-  const gitHubUserRepos = gitHubResponse.data
-
-  console.log(gitHubUserRepos)
-}
-
 
 btnSearch.addEventListener('click', () => fetchGitHubUser(userSearch.value) )
 userSearch.addEventListener('keypress', (e) => {
