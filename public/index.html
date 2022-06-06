@@ -14,6 +14,7 @@
         <span class="material-symbols-sharp">search</span>
         <input type="search" id="user-search" placeholder="Procure seu perfil no Github...">
       </div>
+      <p id="no-results">No results</p>
       <button class="button-search">Search</button>
     </div>
 
@@ -30,17 +31,17 @@
 
         <div class="profile-stats">
           <div class="profile-repos">
-            <span>Repositórios</span>
+            <a href="./pages/repos.html">Repositórios</a>
             <div id="repos" class="circle"></div>
           </div>
 
           <div class="profile-followers">
-            <span>Seguidores</span>
+            <a href="./pages/followers.html">Seguidores</a>
             <div id="followers" class="circle"></div>
           </div>
 
           <div class="profile-following">
-            <span>Seguindo</span>
+            <a href="./pages/following.html">Seguindo</a>
             <div id="following" class="circle"></div>
           </div>
         </div>
@@ -70,7 +71,6 @@
     </div>
   </section>
 
-  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="./assets/js/bundle.js"></script>
 </body>
 </html>

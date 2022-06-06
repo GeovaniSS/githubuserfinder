@@ -10,9 +10,9 @@ import { reposUrl, followingUrl, followersUrl } from './modules/renderGitHubUser
 const userSearch = document.querySelector('#user-search')
 const btnSearch = document.querySelector('.button-search')
 
-const reposLink = document.querySelector('#repos')
-const followersLink = document.querySelector('#followers')
-const followingLink = document.querySelector('#following')
+const reposLink = document.querySelector('.profile-repos')
+const followersLink = document.querySelector('.profile-followers')
+const followingLink = document.querySelector('.profile-following')
 
 fetchGitHubUser('GeovaniSS')
 
@@ -20,6 +20,7 @@ btnSearch.addEventListener('click', () => fetchGitHubUser(userSearch.value))
 userSearch.addEventListener('keypress', (e) => {
   if(e.keyCode === 13) fetchGitHubUser(userSearch.value)
 })
+userSearch.addEventListener('change', () => document.querySelector('#no-results').style.display = 'none')
 reposLink.addEventListener('click', () => fetchGitHubUserRepos(reposUrl))
 followersLink.addEventListener('click', () => fetchGitHubUserFollowers(followersUrl))
 followingLink.addEventListener('click', () => fetchGitHubUserFollowing(followingUrl))
