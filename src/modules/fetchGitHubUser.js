@@ -1,5 +1,7 @@
 import { renderGitHubUser } from './renderGitHubUser';
 
+const axios = require('axios')
+
 const getGitHubUserUrl = user => `https://api.github.com/users/${user}`
 
 export const fetchGitHubUser = async(user) => {
@@ -8,7 +10,6 @@ export const fetchGitHubUser = async(user) => {
     const gitHubUser = gitHubResponse.data
     renderGitHubUser(gitHubUser)
   } catch(e) {
-    alert('Usuário não encontrado')
-    // renderPageWithoutResults()
+    document.querySelector('#no-results').style.display = 'block'
   }
 }

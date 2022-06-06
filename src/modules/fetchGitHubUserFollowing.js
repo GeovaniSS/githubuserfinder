@@ -1,3 +1,5 @@
+const axios = require('axios')
+
 export const fetchGitHubUserFollowing = async(url) => {
   try {
     const gitHubResponse = await axios(url)

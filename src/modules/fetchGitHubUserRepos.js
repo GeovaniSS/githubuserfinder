@@ -1,8 +1,8 @@
-// const getGitHubUserRepos = user => `https://api.github.com/repos/${user}` 
+const axios = require('axios')
 
-export const fetchGitHubUserRepos = async(url) => {
+export const fetchGitHubUserRepos = async(reposUrl) => {
   try {
-    const gitHubResponse = await axios(url)
+    const gitHubResponse = await axios(reposUrl)
     const gitHubUserRepos = gitHubResponse.data
   
     console.log(gitHubUserRepos)
