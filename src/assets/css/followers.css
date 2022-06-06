@@ -1,0 +1,20 @@
+.followers {
+  display: flex;
+  flex-direction: column;
+}
+
+.follower {
+  width: 470px;
+  display: flex;
+  align-items: center;
+  background-color: #141D2F;
+  gap: 20px;
+  margin: 10px 0;
+  padding: 15px 20px;
+  border-radius: 15px;
+}
+
+.follower-photo {
+  height: 50px;
+  border-radius: 50%;
+}

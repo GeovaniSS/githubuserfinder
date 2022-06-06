@@ -1,8 +1,10 @@
 .user-search {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 730px;
   padding: 10px 10px 10px 20px;
+  gap: 10px;
   border-radius: 15px;
   background-color: var(--card-color);
 }
@@ -26,7 +28,15 @@
   padding: 4px 8px;
 }
 
+#no-results {
+  display: none;
+  width: 15%;
+  color: rgb(255, 0, 0);
+  font-weight: bold;
+}
+
 .button-search {
+  width: 15%;
   border-radius: 6px;
   padding: 12px 18px;
   background-color: #0079FF;
