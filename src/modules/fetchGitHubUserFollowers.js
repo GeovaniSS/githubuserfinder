@@ -1,3 +1,5 @@
+import { renderGitHubUserFollowers } from './renderGitHubUserFollowers'
+
 const axios = require('axios')
 
 export const fetchGitHubUserFollowers = async(url) => {
@@ -5,7 +7,7 @@ export const fetchGitHubUserFollowers = async(url) => {
     const gitHubResponse = await axios(url)
     const gitHubUserFollowers = gitHubResponse.data
   
-    console.log(gitHubUserFollowers)
+    renderGitHubUserFollowers(gitHubUserFollowers)
   } catch(e) {
     console.log(e)
   }

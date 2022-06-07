@@ -1,26 +1,4 @@
 import './assets/css/style.css';
 
-import { fetchGitHubUser } from './modules/fetchGitHubUser';
-import { fetchGitHubUserRepos } from './modules/fetchGitHubUserRepos';
-import { fetchGitHubUserFollowers } from './modules/fetchGitHubUserFollowers';
-import { fetchGitHubUserFollowing } from './modules/fetchGitHubUserFollowing';
-
-import { reposUrl, followingUrl, followersUrl } from './modules/renderGitHubUser'
-
-const userSearch = document.querySelector('#user-search')
-const btnSearch = document.querySelector('.button-search')
-
-const reposLink = document.querySelector('.profile-repos')
-const followersLink = document.querySelector('.profile-followers')
-const followingLink = document.querySelector('.profile-following')
-
-fetchGitHubUser('GeovaniSS')
-
-btnSearch.addEventListener('click', () => fetchGitHubUser(userSearch.value))
-userSearch.addEventListener('keypress', (e) => {
-  if(e.keyCode === 13) fetchGitHubUser(userSearch.value)
-})
-userSearch.addEventListener('change', () => document.querySelector('#no-results').style.display = 'none')
-reposLink.addEventListener('click', () => fetchGitHubUserRepos(reposUrl))
-followersLink.addEventListener('click', () => fetchGitHubUserFollowers(followersUrl))
-followingLink.addEventListener('click', () => fetchGitHubUserFollowing(followingUrl))
+import searchGitHubUser from './modules/searchGitHubUser'
+searchGitHubUser()
