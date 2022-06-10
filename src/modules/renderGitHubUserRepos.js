@@ -1,3 +1,5 @@
+const reposResult = document.querySelector('.repos')
+
 export const renderGitHubUserRepos = gitHubUserRepos => {
   const repos = gitHubUserRepos.reduce((acc, repo) => {
     const { name, description, html_url, stargazers_count } = repo
@@ -18,6 +20,5 @@ export const renderGitHubUserRepos = gitHubUserRepos => {
     `
   }, '')
 
-  const reposResult = document.querySelector('.repos')
   reposResult.innerHTML = repos
 }
