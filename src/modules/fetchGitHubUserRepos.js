@@ -2,11 +2,12 @@ import { renderGitHubUserRepos } from './renderGitHubUserRepos'
 
 const axios = require('axios')
 
-export const fetchGitHubUserRepos = async(reposUrl) => {
-  try {
-    const gitHubResponse = await axios(reposUrl)
-    const gitHubUserRepos = gitHubResponse.data
+const getGitHubUserReposUrl = user => `https://api.github.com/users/${user}/repos`
 
+export const fetchGitHubUserRepos = async(user) => {
+  try {
+    const gitHubResponse = await axios(getGitHubUserReposUrl(user))
+    const gitHubUserRepos = gitHubResponse.data
     renderGitHubUserRepos(gitHubUserRepos)
   } catch(e) {
     console.log(e)

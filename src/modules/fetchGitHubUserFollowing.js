@@ -1,11 +1,14 @@
+import { renderGitHubUserFollowers } from './renderGitHubUserFollowers'
+
 const axios = require('axios')
 
-export const fetchGitHubUserFollowing = async(url) => {
+const getGitHubUserFollowingUrl = user => `https://api.github.com/users/${user}/following`
+
+export const fetchGitHubUserFollowing = async(user) => {
   try {
-    const gitHubResponse = await axios(url)
+    const gitHubResponse = await axios(getGitHubUserFollowingUrl(user))
     const gitHubUserFollowing = gitHubResponse.data
-  
-    console.log(gitHubUserFollowing)
+    renderGitHubUserFollowers(gitHubUserFollowing)
   } catch(e) {
     console.log(e)
   }
