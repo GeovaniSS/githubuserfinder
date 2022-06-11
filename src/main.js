@@ -1,4 +1,4 @@
 import './assets/css/style.css';
 
-import searchGitHubUser from './modules/searchGitHubUser'
-searchGitHubUser()
+import loadGitHubUserModules from './modules/loadGitHubUserModules';
+loadGitHubUserModules()
