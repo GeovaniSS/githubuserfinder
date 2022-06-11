@@ -4,7 +4,10 @@ export const renderGitHubUser = gitHubUser => {
   
   document.querySelector('.profile-photo').src = avatar_url
   document.querySelector('#name').innerText = name === null ? login : name
-  document.querySelector('#login').innerText = `${login.toLowerCase()}`
+  document.querySelector('#login').innerText = `@${login.toLowerCase()}`
+  
+  if(!document.querySelector('#bio')) return // Gambiarra
+  
   document.querySelector('#bio').innerText = bio === null ? 'This profile has no bio': bio
   document.querySelector('#repos').innerText = public_repos
   document.querySelector('#followers').innerText = followers

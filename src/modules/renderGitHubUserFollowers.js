@@ -1,8 +1,9 @@
+// import { fetchGitHubUser } from "./fetchGitHubUser"
 const followersResult = document.querySelector('.followers')
 
 export const renderGitHubUserFollowers = gitHubUserFollowers => {
   const followers = gitHubUserFollowers.reduce((acc, follower) => {
-    const { avatar_url, html_url, login, url } = follower 
+    const { avatar_url, html_url, login } = follower 
     
     return acc + `
     <div class="follower">
@@ -13,6 +14,7 @@ export const renderGitHubUserFollowers = gitHubUserFollowers => {
       </div>
     </div>
     `
+    //  <h2 id="name">${fetchGitHubUser(login).then(gitHubUser => gitHubUser.name)}</h2>
     // <h2 id="name">${fetchGitHubUser(url)}</h2>
   }, '')
 
