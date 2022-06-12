@@ -7,7 +7,7 @@ export const renderGitHubUserRepos = gitHubUserRepos => {
     <div class="repo">
       <div class="repo-info">
         <a href="${html_url}"> <h2 id="repos-name">${name}</h2> </a>
-        <p id="repos-description">${description}</p>
+        <p id="repos-description">${description === null ? 'No description' : description}</p>
       </div>
 
       <div class="repo-star">

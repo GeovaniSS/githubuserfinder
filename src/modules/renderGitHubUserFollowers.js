@@ -1,22 +1,32 @@
-// import { fetchGitHubUser } from "./fetchGitHubUser"
+import { fetchGitHubUser } from "./fetchGitHubUser"
+
 const followersResult = document.querySelector('.followers')
 
-export const renderGitHubUserFollowers = gitHubUserFollowers => {
-  const followers = gitHubUserFollowers.reduce((acc, follower) => {
-    const { avatar_url, html_url, login } = follower 
+export const renderGitHubUserFollowers = async(gitHubUserFollowers) => {
+  const followers = gitHubUserFollowers.map(({ login }) => fetchGitHubUser(login))
+  console.log(followers)
+  // const followersPromises = await Promise.all(followers)
+  
+  // followersPromises.reduce((acc, follower) => {
+  //   const { avatar_url, html_url, name, login, bio } = follower 
     
-    return acc + `
-    <div class="follower">
-      <a href="${html_url}"><img src="${avatar_url}" class="follower-photo" alt="Foto do perfil Github"></a>
+  //   return acc + `
+  //   <div class="follower">
+  //     <a href="${html_url}" target="_blank"><img src="${avatar_url}" class="follower-photo" alt="Foto do perfil Github"></a>
+  
+  //     <div class="follower-content">
+  //       <h2 id="name">${name}</h2>
+  //       <p id="login">@${login}</p>
+  //     </div>
+  //   </div>
+  //   `
+  // }, '')
 
-      <div class="follower-content">
-        <h2 id="name">${login}</h2>
-      </div>
-    </div>
-    `
-    //  <h2 id="name">${fetchGitHubUser(login).then(gitHubUser => gitHubUser.name)}</h2>
-    // <h2 id="name">${fetchGitHubUser(url)}</h2>
-  }, '')
+    // const { avatar_url, html_url, name, login, bio } = follower 
+    
+    // const gitHubUser = await fetchGitHubUser(login)
+
+  // }, '')
 
   followersResult.innerHTML = followers
 }
