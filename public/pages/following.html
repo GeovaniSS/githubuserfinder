@@ -6,26 +6,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Github User Finder</title>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
-  <link rel="stylesheet" href="../../src/assets/css/repos.css">
-  <link rel="stylesheet" href="../../src/assets/css/followers.css">
+  <link rel="stylesheet" href="../../src/assets/css/style.css">
+  <link rel="stylesheet" href="../../src/assets/css/following.css">
 </head>
 <body>
   <section class="container">
     <div class="profile-card">
       <div class="profile-content">
-        <img src="" class="profile-photo" alt="Foto do perfil Github">
+        <div class="profile-header">
+          <img src="" class="profile-photo" alt="Foto do perfil Github">
 
-        <div>
-          <h1 id="name"></h1>
-          <h4 id="login"></h4>
+          <div class="profile-name">
+            <h1 id="name"></h1>
+            <h4 id="login"></h4>
+          </div>
+          
+          <a href="../index.html">
+            <button class="btn-back">Back</button>
+          </a>
         </div>
-        
-        <a href="../index.html">
-          <button class="btn-back">Back</button>
-        </a>
+  
+        <div class="following">
+          <h1>Seguindo</h1>
+        </div>
       </div>
-
-      <div class="followers"></div>
     </div>
   </section>
   <script src="../assets/js/bundle.js"></script>

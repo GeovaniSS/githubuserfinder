@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Github User Finder</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="../src/assets/css/style.css">
+  <link rel="stylesheet" href="../src/assets/css/responsive.css">
 </head>
 <body>
   <section class="container">
@@ -19,50 +21,51 @@
     </div>
 
     <div class="profile-card">
-      <img src="" class="profile-photo" alt="Foto do perfil Github">
-
       <div class="profile-content">
-        <div>
-          <h1 id="name"></h1>
-          <h4 id="login"></h4>
+        <div class="profile-header">
+          <img src="" class="profile-photo" alt="Foto do perfil Github">
+          <div class="profile-name">
+            <h1 id="name"></h1>
+            <h4 id="login"></h4>
+          </div>
         </div>
 
         <p id="bio"></p>
 
         <div class="profile-stats">
-          <div class="profile-repos">
+          <div class="repos">
             <a href="./pages/repos.html">Repositórios</a>
             <div id="repos" class="circle"></div>
           </div>
 
-          <div class="profile-followers">
+          <div class="followers">
             <a href="./pages/followers.html">Seguidores</a>
             <div id="followers" class="circle"></div>
           </div>
 
-          <div class="profile-following">
+          <div class="following">
             <a href="./pages/following.html">Seguindo</a>
             <div id="following" class="circle"></div>
           </div>
         </div>
 
-        <div class="profile-info">
-          <div class="icons">
+        <div class="profile-infos">
+          <div class="profile-icon">
             <img src="../src/assets/img/icon-location.svg" alt="Ícone da Localização">
             <span id="location"></span>
           </div>
 
-          <div class="icons">
+          <div class="profile-icon">
             <img src="../src/assets/img/icon-website.svg" alt="Ícone do WebSite">
             <span id="blog"></span>
           </div>
 
-          <div class="icons">
+          <div class="profile-icon">
             <img src="../src/assets/img/icon-twitter.svg" alt="Ícone do Twitter">
             <span id="twitter"></span>
           </div>
 
-          <div class="icons">
+          <div class="profile-icon">
             <img src="../src/assets/img/icon-company.svg" alt="Ícone da Empresa">
             <span id="company"></span>
           </div>
