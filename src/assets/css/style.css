@@ -1,6 +1,9 @@
 @charset "UTF-8";
+
 @import 'search.css';
 @import 'profile.css';
+/* @import 'responsive.css'; */
+
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
 
 * {
@@ -18,10 +21,15 @@
   --bla: #0079FF;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body {
   font-family: 'Space Mono', monospace;
   color: #fff;
   background-color: var(--bg-color);
+  font-size: 1.6rem;
 }
 
 h4 {
@@ -30,7 +38,7 @@ h4 {
 
 input, input::placeholder, button {
   font-family: 'Space Mono';
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #fff;
   outline: none;
   border: none;

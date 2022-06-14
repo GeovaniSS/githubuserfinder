@@ -1,0 +1,22 @@
+@import 'extra.css';
+
+.following {
+  display: flex;
+  flex-direction: column;
+}
+
+.follow {
+  width: 470px;
+  display: flex;
+  align-items: center;
+  background-color: #141D2F;
+  gap: 20px;
+  margin: 10px 0;
+  padding: 15px 20px;
+  border-radius: 15px;
+}
+
+.following-photo {
+  height: 50px;
+  border-radius: 50%;
+}

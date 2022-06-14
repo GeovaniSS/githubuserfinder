@@ -1,0 +1,108 @@
+@media screen and (max-width: 650px) {
+  html {
+    font-size: 55%;
+  }
+
+  .user-search, .profile-card {
+    width: 400px;
+  }
+
+  .search-field {
+    width: 85%;
+  }
+
+  .button-search {
+    width: 15%;
+  }
+
+  .profile-photo {
+    height: 140px;
+  }
+
+  .profile-stats, .profile-infos {
+    width: 380px;
+  }
+
+  .profile-stats {
+    padding: 25px 10px;
+  }
+
+  .circle {
+    width: 27px;
+    height: 22px;
+  }
+  
+  .profile-icon img {
+    width: 16px;
+    height: 18px;
+  }
+}
+
+@media screen and (min-width: 650px) and (max-width: 900px) {
+  #bio {
+    padding: 0px 35px;
+  }
+
+  .user-search, .profile-card {
+    width: 570px;
+  }
+
+  .profile-card {
+    padding-top: 20px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #bio {
+    text-align: center;
+  }
+
+  .profile-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .profile-content {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .profile-header {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .profile-name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-infos {
+    justify-items: center;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .user-search, .profile-card {
+    width: 730px;
+  }
+  
+  .profile-card {
+    position: relative;
+  }
+
+  .profile-content {
+    width: 480px;
+    margin-left: auto;
+  }
+
+  .profile-photo {
+    position: absolute;
+    left: 0;
+    margin-left: 30px;
+    height: 170px;
+  }
+}

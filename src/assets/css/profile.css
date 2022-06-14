@@ -1,17 +1,11 @@
+#login {
+  color: #0079FF;
+}
+
 .profile-card {
-  display: flex;
-  justify-content: space-evenly;
-  gap: 25px;
-  width: 730px;
-  max-height: 400px;
   padding: 30px;
   border-radius: 15px;
   background-color: var(--card-color);
-}
-
-.profile-photo {
-  height: 170px;
-  border-radius: 50%;
 }
 
 .profile-content {
@@ -20,8 +14,13 @@
   gap: 15px;
 }
 
-#login {
-  color: #0079FF;
+.profile-header {
+  display: flex;
+}
+
+.profile-photo {
+  height: 170px;
+  border-radius: 50%;
 }
 
 .profile-stats {
@@ -34,14 +33,16 @@
   border-radius: 15px;
 }
 
-.profile-repos, .profile-followers, .profile-following {
+.repos, .followers, .following {
   cursor: pointer;
   display: flex;
+  align-items: center;
   gap: 5px;
 }
 
 .circle {
   display: flex;
+  align-items: center;
   justify-content: center;
   width: 30px;
   height: 25px;
@@ -50,20 +51,21 @@
   color: #0079FF;
 }
 
-.profile-info {
+.profile-infos {
+  width: 470px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
   align-items: center;
 }
 
-.icons {
+.profile-icon {
   display: flex;
   align-items: center;
   gap: 15px;
 }
 
-.icons img {
+.profile-icon img {
   width: 20px;
-  height: 20px;
+  height: 22px;
 }
