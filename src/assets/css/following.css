@@ -21,8 +21,45 @@
   border-radius: 50%;
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 400px) {
+  .follow {
+    width: 250px;
+  }
+
+  .following-photo {
+    height: 80px;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 600px) {
+  .follow {
+    width: 280px;
+  }
+
+  .following-photo {
+    height: 100px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .follow {
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 15px;
+    gap: 10px;
+  }
+
+
+  .following-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 900px) {
   .follow{
-    width: 300px;
+    width: 400px;
   }
 }

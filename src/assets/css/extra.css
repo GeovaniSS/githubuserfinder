@@ -1,9 +1,24 @@
 h1 {
-  font-size: 20px;
+  font-size: 2rem;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111d33;
+  border-radius: 0px 15px 15px 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #0079FF;
+  border-radius: 20px;
+  border: 2px solid rgb(255, 255, 255);
 }
 
 #name { 
-  font-size: 23px;
+  font-size: 2.3rem;
 }
 
 .profile-card {
@@ -13,13 +28,11 @@ h1 {
 }
 
 .profile-content {
-  display: flex;
   flex-direction: row;
   gap: 20px;
 }
 
 .profile-header {
-  display: flex;
   flex-direction: column;
   gap: 10px;
 }
@@ -27,13 +40,23 @@ h1 {
 .btn-back {
   width: 170px;
   border-radius: 6px;
-  padding: 12px 18px;
+  padding: 12px 0px;
   background-color: #0079FF;
 }
 
 .btn-back:hover {
   cursor: pointer;
   background-color: #3390fa;
+}
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 55%;
+  }
+
+  #name {
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -51,8 +74,6 @@ h1 {
   }
 
   .profile-name {
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
   }

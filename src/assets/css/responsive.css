@@ -1,6 +1,6 @@
 @media screen and (max-width: 450px) {
   html {
-    font-size: 50%;
+    font-size: 52%;
   }
 
   .user-search, .profile-card {
@@ -8,19 +8,25 @@
   }
 
   .user-search {
-    padding: 5px 10px 5px 20px;
+    padding: 5px 10px;
   }
 
   .search-field input {
-    width: 70%;
+    width: 65%;
   }
 
+  .profile-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } 
+
   .profile-stats, .profile-infos {
-    width: 300px;
+    width: 280px;
   }
 
   .profile-stats {
-    padding: 12px 15px;
+    padding: 12px 10px;
     justify-content: space-between;
   }
 
@@ -30,14 +36,14 @@
   }
 
   .profile-icon img {
-    width: 14px;
-    height: 14px;
+    width: 16px;
+    height: 16px;
   }
 }
 
 @media screen and (min-width: 450px) and (max-width: 650px) {
   html {
-    font-size: 55%;
+    font-size: 56%;
   }
 
   .user-search, .profile-card {
@@ -53,14 +59,9 @@
     justify-content: space-around;
   }
 
-  .circle {
-    width: 29px;
-    height: 25px;
-  }
-
   .profile-icon img {
-    width: 16px;
-    height: 16px;
+    width: 18px;
+    height: 18px;
   }
 }
 
@@ -75,7 +76,6 @@
   
   .search-field input {
     font-size: 14px;
-    padding: 0px;
   }
   
   .button-search {
@@ -107,17 +107,6 @@
     text-align: center;
   }
 
-  .profile-card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .profile-content {
-    align-items: center;
-    justify-content: center;
-  }
-
   .profile-header {
     flex-direction: column;
     align-items: center;
@@ -125,8 +114,6 @@
   }
 
   .profile-name {
-    display: flex;
-    flex-direction: column;
     align-items: center;
   }
 
