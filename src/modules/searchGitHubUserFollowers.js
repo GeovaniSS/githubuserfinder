@@ -1,3 +1,4 @@
+import '../assets/css/followers.css'
 import { fetchGitHubUserFollowers } from "./fetchGitHubUserFollowers";
 import { renderGitHubUserFollowers } from './renderGitHubUserFollowers'
 

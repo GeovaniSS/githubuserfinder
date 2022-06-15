@@ -1,3 +1,4 @@
+import '../assets/css/repos.css'
 import { fetchGitHubUserRepos } from "./fetchGitHubUserRepos"
 import { renderGitHubUserRepos } from './renderGitHubUserRepos'
 
