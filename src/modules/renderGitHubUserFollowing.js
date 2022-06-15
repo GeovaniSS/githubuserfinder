@@ -1,19 +1,23 @@
-const followingResult = document.querySelector('.followers')
+import { fetchGitHubUser } from "./fetchGitHubUser"
 
-export const renderGitHubUserFollowing = gitHubUserFollowing => {
-  const following = gitHubUserFollowing.reduce((acc, following) => {
-    const { avatar_url, html_url, login } = following
-    
+const followingResult = document.querySelector('.following')
+
+export const renderGitHubUserFollowing = async(gitHubUserFollowing) => {
+  const followingPromises = gitHubUserFollowing.map(({ login }) => fetchGitHubUser(login))
+  const followingArray = await Promise.all(followingPromises)
+  const following = followingArray.reduce((acc, following) => {
+    const { avatar_url, html_url, name, login } = following
+
     return acc + `
-    <div class="follower">
-      <a href="${html_url}"><img src="${avatar_url}" class="follower-photo" alt="Foto do perfil Github"></a>
+    <div class="follow">
+      <img src="${avatar_url}" class="following-photo" alt="Foto do perfil Github">
 
       <div class="follower-content">
-        <h2 id="name">${login}</h2>
+        <h2 id="name">${name === null ? login : name}</h2>
+        <p id="login">@${login}</p>
       </div>
     </div>
     `
-    // <h2 id="name">Geovani Silva</h2>
   }, '')
 
   followingResult.innerHTML = following
