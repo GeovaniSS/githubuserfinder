@@ -78,7 +78,7 @@ var renderGitHubUserRepos = function renderGitHubUserRepos(gitHubUserRepos) {
         description = repo.description,
         html_url = repo.html_url,
         stargazers_count = repo.stargazers_count;
-    return acc + " \n    <div class=\"repo\">\n      <div class=\"repo-info\">\n        <a href=\"".concat(html_url, "\"> <h2 id=\"repos-name\">").concat(name, "</h2> </a>\n        <p id=\"repos-description\">").concat(description === null ? 'No description' : description, "</p>\n      </div>\n\n      <div class=\"repo-star\">\n        <div class=\"star\">\n          <span class=\"material-icons-outlined\">star</span>\n          <span id=\"total-stars\">").concat(stargazers_count, "</span>\n        </div>\n      </div>\n    </div>\n    ");
+    return acc + " \n    <div class=\"repo\">\n      <div class=\"repo-info\">\n        <h2 id=\"repos-name\">".concat(name, "</h2> \n        <div class=\"repo-star\">\n          <div class=\"star\">\n            <span class=\"material-icons-outlined\">star</span>\n            <span id=\"total-stars\">").concat(stargazers_count, "</span>\n          </div>\n        </div>\n      </div>\n\n      <p id=\"repo-description\">").concat(description === null ? 'No description' : description, "</p>\n    </div>\n    ");
   }, '');
   reposResult.innerHTML = repos;
 };

@@ -84,35 +84,30 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 var followersResult = document.querySelector('.followers');
 var renderGitHubUserFollowers = /*#__PURE__*/function () {
   var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(gitHubUserFollowers) {
-    var followers;
+    var followersPromises, followersArray, followers;
     return _regeneratorRuntime().wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
-            followers = gitHubUserFollowers.map(function (_ref2) {
+            followersPromises = gitHubUserFollowers.map(function (_ref2) {
               var login = _ref2.login;
               return (0,_fetchGitHubUser__WEBPACK_IMPORTED_MODULE_0__.fetchGitHubUser)(login);
             });
-            console.log(followers); // const followersPromises = await Promise.all(followers)
-            // followersPromises.reduce((acc, follower) => {
-            //   const { avatar_url, html_url, name, login, bio } = follower 
-            //   return acc + `
-            //   <div class="follower">
-            //     <a href="${html_url}" target="_blank"><img src="${avatar_url}" class="follower-photo" alt="Foto do perfil Github"></a>
-            //     <div class="follower-content">
-            //       <h2 id="name">${name}</h2>
-            //       <p id="login">@${login}</p>
-            //     </div>
-            //   </div>
-            //   `
-            // }, '')
-            // const { avatar_url, html_url, name, login, bio } = follower 
-            // const gitHubUser = await fetchGitHubUser(login)
-            // }, '')
-
-            followersResult.innerHTML = followers;
+            _context.next = 3;
+            return Promise.all(followersPromises);
 
           case 3:
+            followersArray = _context.sent;
+            followers = followersArray.reduce(function (acc, follower) {
+              var avatar_url = follower.avatar_url,
+                  html_url = follower.html_url,
+                  name = follower.name,
+                  login = follower.login;
+              return acc + "\n    <div class=\"follower\">\n      <img src=\"".concat(avatar_url, "\" class=\"follower-photo\" alt=\"Foto do perfil Github\">\n  \n      <div class=\"follower-content\">\n        <h2 id=\"name\">").concat(name === null ? login : name, "</h2>\n        <p id=\"login\">@").concat(login, "</p>\n      </div>\n    </div>\n    ");
+            }, '');
+            followersResult.innerHTML = followers;
+
+          case 6:
           case "end":
             return _context.stop();
         }
