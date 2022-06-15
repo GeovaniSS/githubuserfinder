@@ -2,7 +2,12 @@ h1 {
   font-size: 20px;
 }
 
+#name { 
+  font-size: 23px;
+}
+
 .profile-card {
+  height: 400px;
   overflow-x: hidden;
   overflow-y: scroll;
 }
@@ -10,6 +15,7 @@ h1 {
 .profile-content {
   display: flex;
   flex-direction: row;
+  gap: 20px;
 }
 
 .profile-header {
@@ -18,14 +24,8 @@ h1 {
   gap: 10px;
 }
 
-/* .profile-photo {
-  position: static;
-  left: 0;
-  margin-left: 0px;
-} */
-
 .btn-back {
-  width: 100%;
+  width: 170px;
   border-radius: 6px;
   padding: 12px 18px;
   background-color: #0079FF;
@@ -37,7 +37,23 @@ h1 {
 }
 
 @media screen and (max-width: 900px) {
+  .profile-card {
+    height: 600px;
+  }
+
   .profile-content {
     flex-direction: column;
+  }
+
+  .profile-header {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .profile-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }

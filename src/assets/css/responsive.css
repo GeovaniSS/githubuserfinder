@@ -1,4 +1,41 @@
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+
+  .user-search, .profile-card {
+    width: 320px;
+  }
+
+  .user-search {
+    padding: 5px 10px 5px 20px;
+  }
+
+  .search-field input {
+    width: 70%;
+  }
+
+  .profile-stats, .profile-infos {
+    width: 300px;
+  }
+
+  .profile-stats {
+    padding: 12px 15px;
+    justify-content: space-between;
+  }
+
+  .circle {
+    width: 25px;
+    height: 22px;
+  }
+
+  .profile-icon img {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+@media screen and (min-width: 450px) and (max-width: 650px) {
   html {
     font-size: 55%;
   }
@@ -7,44 +44,57 @@
     width: 400px;
   }
 
+  .profile-stats, .profile-infos {
+    width: 360px;
+  }
+
+  .profile-stats {
+    padding: 12px 0px;
+    justify-content: space-around;
+  }
+
+  .circle {
+    width: 29px;
+    height: 25px;
+  }
+
+  .profile-icon img {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media screen and (max-width: 650px) {
   .search-field {
-    width: 85%;
+    width: 80%;
   }
-
+  
+  .search-field span {
+    font-size: 25px;
+  }
+  
+  .search-field input {
+    font-size: 14px;
+    padding: 0px;
+  }
+  
   .button-search {
-    width: 15%;
+    width: 20%;
   }
-
+  
   .profile-photo {
     height: 140px;
   }
 
-  .profile-stats, .profile-infos {
-    width: 380px;
-  }
-
-  .profile-stats {
-    padding: 25px 10px;
-  }
-
-  .circle {
-    width: 27px;
-    height: 22px;
-  }
-  
-  .profile-icon img {
-    width: 16px;
-    height: 18px;
+  .repos, .followers, .following {
+    flex-direction: column;
+    align-items: center;
   }
 }
 
 @media screen and (min-width: 650px) and (max-width: 900px) {
-  #bio {
-    padding: 0px 35px;
-  }
-
   .user-search, .profile-card {
-    width: 570px;
+    width: 530px;
   }
 
   .profile-card {
@@ -103,6 +153,5 @@
     position: absolute;
     left: 0;
     margin-left: 30px;
-    height: 170px;
   }
 }

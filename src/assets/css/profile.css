@@ -19,8 +19,8 @@
 }
 
 .profile-photo {
-  height: 170px;
   border-radius: 50%;
+  height: 170px;
 }
 
 .profile-stats {
@@ -36,7 +36,6 @@
 .repos, .followers, .following {
   cursor: pointer;
   display: flex;
-  align-items: center;
   gap: 5px;
 }
 

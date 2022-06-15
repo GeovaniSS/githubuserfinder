@@ -20,3 +20,9 @@
   height: 50px;
   border-radius: 50%;
 }
+
+@media screen and (max-width: 650px) {
+  .follow{
+    width: 300px;
+  }
+}
