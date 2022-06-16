@@ -9,3 +9,4 @@ export const searchGitHubUserRepos = async(user) => {
   
   renderGitHubUserRepos(gitHubUserRepos)
 }
+

@@ -1,12 +1,8 @@
 import { fetchGitHubUser } from './fetchGitHubUser';
 import { renderGitHubUser } from './renderGitHubUser';
 
-const userSearch = document.querySelector('#user-search')
-const btnSearch = document.querySelector('.button-search')
-const errorMessage = document.querySelector('#no-results')
-
 const showErrorMessage = () => {
-  if(!errorMessage) return
+  const errorMessage = document.querySelector('#no-results')
   errorMessage.style.display = 'block'
 }
 
@@ -17,12 +13,4 @@ export const searchGitHubUser = async(user) => {
 
   renderGitHubUser(gitHubUser)
   localStorage.setItem('user', user)
-}
-
-export default () => {
-  btnSearch.addEventListener('click', () => searchGitHubUser(userSearch.value))
-  userSearch.addEventListener('keypress', (e) => {
-    if(e.keyCode === 13) searchGitHubUser(userSearch.value)
-  })
-  userSearch.addEventListener('change', () => errorMessage.style.display = 'none')
 }

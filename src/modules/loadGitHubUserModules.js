@@ -6,7 +6,7 @@ searchGitHubUser(user || 'GeovaniSS')
 
 export default async() => {
   if(location.pathname === '/public/index.html') { 
-    const { default: gitHubUserEvents } = await import('./searchGitHubUser')
+    const { default: gitHubUserEvents } = await import('./gitHubUserEvents')
     gitHubUserEvents()
   }
 
