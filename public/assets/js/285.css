@@ -1,0 +1,146 @@
+@media screen and (max-width: 450px) {
+  html {
+    font-size: 52%;
+  }
+
+  .user-search, .profile-card {
+    width: 320px;
+  }
+
+  .user-search {
+    padding: 5px 10px;
+  }
+
+  .search-field input {
+    width: 65%;
+  }
+
+  .profile-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } 
+
+  .profile-stats, .profile-infos {
+    width: 280px;
+  }
+
+  .profile-stats {
+    padding: 12px 10px;
+    justify-content: space-between;
+  }
+
+  .circle {
+    width: 25px;
+    height: 22px;
+  }
+
+  .profile-icon img {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media screen and (min-width: 450px) and (max-width: 650px) {
+  html {
+    font-size: 56%;
+  }
+
+  .user-search, .profile-card {
+    width: 400px;
+  }
+
+  .profile-stats, .profile-infos {
+    width: 360px;
+  }
+
+  .profile-stats {
+    padding: 12px 0px;
+    justify-content: space-around;
+  }
+
+  .profile-icon img {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .search-field {
+    width: 80%;
+  }
+  
+  .search-field span {
+    font-size: 25px;
+  }
+  
+  .search-field input {
+    font-size: 14px;
+  }
+  
+  .button-search {
+    width: 20%;
+  }
+  
+  .profile-photo {
+    height: 140px;
+  }
+
+  .repos, .followers, .following {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 650px) and (max-width: 900px) {
+  .user-search, .profile-card {
+    width: 530px;
+  }
+
+  .profile-card {
+    padding-top: 20px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #bio {
+    text-align: center;
+  }
+
+  .profile-header {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .profile-name {
+    align-items: center;
+  }
+
+  .profile-infos {
+    justify-items: center;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .user-search, .profile-card {
+    width: 730px;
+  }
+  
+  .profile-card {
+    position: relative;
+  }
+
+  .profile-content {
+    width: 480px;
+    margin-left: auto;
+  }
+
+  .profile-photo {
+    position: absolute;
+    left: 0;
+    margin-left: 30px;
+  }
+}
+
+/*# sourceMappingURL=285.css.map*/

@@ -1,0 +1,162 @@
+h1 {
+  font-size: 2rem;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111d33;
+  border-radius: 0px 15px 15px 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #0079FF;
+  border-radius: 20px;
+  border: 2px solid rgb(255, 255, 255);
+}
+
+#name { 
+  font-size: 2.3rem;
+}
+
+.profile-card {
+  height: 400px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.profile-content {
+  flex-direction: row;
+  gap: 20px;
+}
+
+.profile-header {
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn-back {
+  width: 170px;
+  border-radius: 6px;
+  padding: 12px 0px;
+  background-color: #0079FF;
+}
+
+.btn-back:hover {
+  cursor: pointer;
+  background-color: #3390fa;
+}
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 55%;
+  }
+
+  #name {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .profile-card {
+    height: 600px;
+  }
+
+  .profile-content {
+    flex-direction: column;
+  }
+
+  .profile-header {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .profile-name {
+    justify-content: center;
+    align-items: center;
+  }
+}
+#repos-name {
+  font-size: 2.2rem;
+}
+
+#repo-description {
+  font-size: 1.5rem;
+  margin-top: 5px;
+  font-family: 'Roboto Mono';
+}
+
+.repos {
+  display: flex;
+  flex-direction: column;
+}
+
+.repo {
+  width: 470px;
+  display: flex;
+  flex-direction: column;
+  background-color: #141D2F;
+  margin: 10px 0;
+  padding: 15px 20px;
+  border-radius: 15px;
+}
+
+.repo-info {
+  display: flex; 
+  justify-content: space-between;
+  align-items: center;
+}
+
+.star {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+  height: 26px;
+  border-radius: 6px;
+  background-color: #1F2A41;
+  color: #0079FF;
+}
+
+.star span {
+  font-size: 28px;
+}
+
+#total-stars {
+  font-family: 'Roboto Mono';
+  font-size: 1rem;
+  position: absolute;
+  color: #fff;
+}
+
+@media screen and (max-width: 400px) {
+  .repo {
+    width: 250px;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 600px) {
+  .repo {
+    width: 300px;
+  }
+
+  .star {
+    width: 26px;
+    height: 24px;
+  }
+
+  .star span {
+    font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  .repo {
+    width: 400px;
+  }
+}
+
+/*# sourceMappingURL=195.css.map*/
