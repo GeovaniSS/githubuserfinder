@@ -5,22 +5,24 @@ const user = localStorage.getItem('user')
 searchGitHubUser(user || 'GeovaniSS')
 
 export default async() => {
-  if(location.pathname === '/public/index.html') { 
+  const url = location.href
+
+  if(url.includes('index.html')) { 
     const { default: gitHubUserEvents } = await import('./gitHubUserEvents')
     gitHubUserEvents()
   }
 
-  if(location.pathname === '/public/pages/repos.html') {
+  if(url.includes('repos.html')) {
     const { searchGitHubUserRepos } = await import('./searchGitHubUserRepos')
     searchGitHubUserRepos(user)
   }
 
-  if(location.pathname === '/public/pages/followers.html') {
+  if(url.includes('followers.html')) {
     const { searchGitHubUserFollowers } = await import('./searchGitHubUserFollowers')
     searchGitHubUserFollowers(user)
   }
 
-  if(location.pathname === '/public/pages/following.html') {
+  if(url.includes('following.html')) {
     const { searchGitHubUserFollowing } = await import('./searchGitHubUserFollowing')
     searchGitHubUserFollowing(user)
   }
