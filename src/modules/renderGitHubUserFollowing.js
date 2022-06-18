@@ -12,7 +12,7 @@ export const renderGitHubUserFollowing = async(gitHubUserFollowing) => {
     <div class="follow">
       <img src="${avatar_url}" class="following-photo" alt="Foto do perfil Github">
 
-      <div class="follower-content">
+      <div class="following-content">
         <h2 id="name">${name === null ? login : name}</h2>
         <p id="login">@${login}</p>
       </div>
