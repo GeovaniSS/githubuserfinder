@@ -66,6 +66,12 @@
 }
 
 @media screen and (max-width: 650px) {
+  .profile-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   .search-field {
     width: 80%;
   }
