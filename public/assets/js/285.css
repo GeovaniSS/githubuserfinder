@@ -22,17 +22,12 @@
   } 
 
   .profile-stats, .profile-infos {
-    width: 280px;
+    width: 290px;
   }
 
   .profile-stats {
-    padding: 12px 10px;
+    padding: 12px 12px;
     justify-content: space-between;
-  }
-
-  .circle {
-    width: 25px;
-    height: 22px;
   }
 
   .profile-icon img {
@@ -43,7 +38,7 @@
 
 @media screen and (min-width: 450px) and (max-width: 650px) {
   html {
-    font-size: 56%;
+    font-size: 58%;
   }
 
   .user-search, .profile-card {
@@ -66,6 +61,12 @@
 }
 
 @media screen and (max-width: 650px) {
+  .profile-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   .search-field {
     width: 80%;
   }
@@ -86,6 +87,14 @@
     height: 140px;
   }
 
+  .profile-infos {
+    grid-template-columns: 1fr;
+  }
+  
+  .profile-icon {
+    padding-left: 15px;
+  }
+
   .repos, .followers, .following {
     flex-direction: column;
     align-items: center;
@@ -99,6 +108,10 @@
 
   .profile-card {
     padding-top: 20px;
+  }
+
+  .profile-icon {
+    padding-left: 55px;
   }
 }
 
@@ -118,6 +131,8 @@
   }
 
   .profile-infos {
+    gap: 20px 0px;
+    align-items: center;
     justify-items: center;
   }
 }

@@ -100,6 +100,10 @@ h1 {
 }
 
 @media screen and (max-width: 400px) {
+  .profile-card {
+    width: 320px;
+  }
+
   .follow {
     width: 250px;
   }
@@ -126,7 +130,6 @@ h1 {
     padding: 20px 15px;
     gap: 10px;
   }
-
 
   .following-content {
     display: flex;
