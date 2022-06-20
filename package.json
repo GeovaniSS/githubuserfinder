@@ -4,10 +4,10 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "pack": "webpack -w"
+    "build": "webpack -w"
   },
   "keywords": [],
-  "author": "",
+  "author": "GeovaniSS",
   "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.17.10",
@@ -16,7 +16,6 @@
     "babel-loader": "^8.2.5",
     "css-loader": "^6.7.1",
     "mini-css-extract-plugin": "^2.6.1",
-    "style-loader": "^3.3.1",
     "webpack": "^5.72.1",
     "webpack-cli": "^4.9.2"
   },
