@@ -2,7 +2,7 @@ import { searchGitHubUser } from './searchGitHubUser';
 
 const user = localStorage.getItem('user')
 
-searchGitHubUser(user || 'GeovaniSS')
+searchGitHubUser(user || 'octocat')
 
 export default async() => {
   const url = location.href
