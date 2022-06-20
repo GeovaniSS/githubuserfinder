@@ -22,6 +22,10 @@
 }
 
 @media screen and (max-width: 400px) {
+  .profile-card {
+    width: 320px;
+  }
+
   .follower {
     width: 250px;
   }

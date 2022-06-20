@@ -55,6 +55,10 @@
 }
 
 @media screen and (max-width: 400px) {
+  .profile-card {
+    width: 320px;
+  }
+
   .repo {
     width: 250px;
   }
