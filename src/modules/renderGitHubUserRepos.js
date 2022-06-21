@@ -17,7 +17,7 @@ export const renderGitHubUserRepos = gitHubUserRepos => {
         </div>
       </div>
 
-      <p id="repo-description">${description === null ? 'No description' : description}</p>
+      <p id="repo-description">${!description ? 'No description' : description}</p>
     </div>
     `
   }, '')

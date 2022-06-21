@@ -7,7 +7,7 @@ export const searchGitHubUserFollowing = async(user) => {
   const gitHubUserFollowing = await fetchGitHubUserFollowing(user)
 
   if(!gitHubUserFollowing || !gitHubUserFollowing.length) 
-    return showEmptyMessage('This profile has 0 following', document.querySelector('.following'))
+    return showEmptyMessage('This profile follows 0 users', document.querySelector('.following'))
 
   renderGitHubUserFollowing(gitHubUserFollowing)
 }
