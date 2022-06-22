@@ -9,15 +9,15 @@ export const renderGitHubUserRepos = gitHubUserRepos => {
         <a href="${html_url}" target="_blank">
           <h2 id="repos-name">${name}</h2> 
         </a>
-        <div class="repo-star">
-          <div class="star">
-            <span class="material-icons-outlined">star</span>
-            <span id="total-stars">${stargazers_count}</span>
-          </div>
-        </div>
+        <p id="repo-description">${!description ? 'No description' : description}</p>
       </div>
 
-      <p id="repo-description">${!description ? 'No description' : description}</p>
+      <div class="repo-star">
+        <div class="star">
+          <span class="material-icons-outlined">star</span>
+          <span id="total-stars">${stargazers_count}</span>
+        </div>
+      </div>
     </div>
     `
   }, '')
