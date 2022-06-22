@@ -15,12 +15,6 @@
     width: 65%;
   }
 
-  .profile-card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  } 
-
   .profile-stats, .profile-infos {
     width: 290px;
   }
@@ -87,17 +81,14 @@
     height: 140px;
   }
 
-  .profile-infos {
-    grid-template-columns: 1fr;
-  }
-  
-  .profile-icon {
-    padding-left: 15px;
-  }
-
   .repos, .followers, .following {
     flex-direction: column;
     align-items: center;
+  }
+
+  .profile-infos {
+    grid-template-columns: 1fr;
+    padding-left: 15px;
   }
 }
 
@@ -106,18 +97,19 @@
     width: 530px;
   }
 
-  .profile-card {
-    padding-top: 20px;
-  }
-
-  .profile-icon {
-    padding-left: 55px;
+  .profile-infos {
+    padding-left: 10px;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
 @media screen and (max-width: 900px) {
   #bio {
     text-align: center;
+  }
+
+  .profile-card {
+    padding-top: 20px;
   }
 
   .profile-header {
@@ -128,12 +120,6 @@
 
   .profile-name {
     align-items: center;
-  }
-
-  .profile-infos {
-    gap: 20px 0px;
-    align-items: center;
-    justify-items: center;
   }
 }
 
