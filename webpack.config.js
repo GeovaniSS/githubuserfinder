@@ -1,5 +1,7 @@
 const path = require('path')
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const NodePolyfillPlugin = require("node-polyfill-webpack-plugin")
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
   mode: 'production', 
@@ -10,7 +12,11 @@ module.exports = {
     path: path.resolve(__dirname, 'public', 'assets', 'js'),
     filename: '[name].bundle.js'
   },
-  plugins: [new MiniCssExtractPlugin()],
+  plugins: [
+    new MiniCssExtractPlugin(), 
+    new Dotenv(),
+    new NodePolyfillPlugin()
+  ],
   module: {
     rules: [{
       exclude: /node_modules/,
@@ -26,5 +32,10 @@ module.exports = {
       use: [MiniCssExtractPlugin.loader, 'css-loader']
     }]
   },
-  devtool: 'source-map'
+  devtool: 'source-map',
+  resolve: {
+    fallback: {
+      fs: false
+    }
+  }
 }
