@@ -99,7 +99,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0px 8px;
+  padding: 0px 6px;
   border-radius: 6px;
   background-color: #1F2A41;
   color: #0079FF;
@@ -108,9 +108,8 @@
 .profile-infos {
   width: 470px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 20px;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 20px 0px;
 }
 
 .profile-icon {
