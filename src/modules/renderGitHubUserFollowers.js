@@ -1,11 +1,11 @@
 import { fetchGitHubUser } from "./fetchGitHubUser"
 
-const followersResult = document.querySelector('.followers')
+const followersContainer = document.querySelector('.followers')
 
 export const renderGitHubUserFollowers = async(gitHubUserFollowers) => {
   const followersPromises = gitHubUserFollowers.map(({ login }) => fetchGitHubUser(login))
-  const followersArray = await Promise.all(followersPromises)
-  const followers = followersArray.reduce((acc, follower) => {
+  const followers = await Promise.all(followersPromises)
+  const followersTemplate = followers.reduce((acc, follower) => {
     const { avatar_url, name, login } = follower 
 
     return acc + `
@@ -20,5 +20,5 @@ export const renderGitHubUserFollowers = async(gitHubUserFollowers) => {
     `
   }, '')
 
-  followersResult.innerHTML = followers
+  followersContainer.innerHTML += followersTemplate
 }

@@ -1,7 +1,7 @@
-const reposResult = document.querySelector('.repos')
+const reposContainer = document.querySelector('.repos')
 
 export const renderGitHubUserRepos = gitHubUserRepos => {
-  const repos = gitHubUserRepos.reduce((acc, repo) => {
+  const reposTemplate = gitHubUserRepos.reduce((acc, repo) => {
     const { name, description, html_url, stargazers_count } = repo
     return acc + ` 
     <div class="repo">
@@ -22,5 +22,5 @@ export const renderGitHubUserRepos = gitHubUserRepos => {
     `
   }, '')
 
-  reposResult.innerHTML = repos
+  reposContainer.innerHTML += reposTemplate
 }

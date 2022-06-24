@@ -1,12 +1,12 @@
 import { fetchGitHubUser } from "./fetchGitHubUser"
 
-const followingResult = document.querySelector('.following')
+const followingContainer = document.querySelector('.following')
 
 export const renderGitHubUserFollowing = async(gitHubUserFollowing) => {
   const followingPromises = gitHubUserFollowing.map(({ login }) => fetchGitHubUser(login))
-  const followingArray = await Promise.all(followingPromises)
-  const following = followingArray.reduce((acc, following) => {
-    const { avatar_url, name, login } = following
+  const following = await Promise.all(followingPromises)
+  const followingTemplate = following.reduce((acc, following) => {
+  const { avatar_url, name, login } = following
 
     return acc + `
     <div class="follow">
@@ -20,5 +20,5 @@ export const renderGitHubUserFollowing = async(gitHubUserFollowing) => {
     `
   }, '')
 
-  followingResult.innerHTML = following
+  followingContainer.innerHTML += followingTemplate
 }
