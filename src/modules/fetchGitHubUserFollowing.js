@@ -1,10 +1,8 @@
 import gitHubApi from '../services/gitHubApi'
 
-// const getGitHubUserFollowingUrl = user => `https://api.github.com/users/${user}/following`
-
-export const fetchGitHubUserFollowing = async(user) => {
+export const fetchGitHubUserFollowing = async(user, page) => {
   try {
-    const gitHubResponse = await gitHubApi(`${user}/following`)
+    const gitHubResponse = await gitHubApi(`${user}/following?&per_page=5&page=${page}`)
     const gitHubUserFollowing = gitHubResponse.data
     return gitHubUserFollowing
   } catch(e) {

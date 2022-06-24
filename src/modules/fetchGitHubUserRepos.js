@@ -1,9 +1,8 @@
 import gitHubApi from '../services/gitHubApi'
-// const getGitHubUserReposUrl = user => `https://api.github.com/users/${user}/repos`
 
-export const fetchGitHubUserRepos = async(user) => {
+export const fetchGitHubUserRepos = async(user, page) => {
   try {
-    const gitHubResponse = await gitHubApi(`${user}/repos`)
+    const gitHubResponse = await gitHubApi(`${user}/repos?&per_page=5&page=${page}`)
     const gitHubUserRepos = gitHubResponse.data
     return gitHubUserRepos
   } catch(e) {
