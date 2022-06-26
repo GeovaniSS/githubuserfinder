@@ -84,12 +84,12 @@ h1 {
     width: 745px;
   }
 }
-.followers {
+.following {
   display: flex;
   flex-direction: column;
 }
 
-.follower {
+.follow {
   width: 470px;
   display: flex;
   align-items: center;
@@ -100,7 +100,7 @@ h1 {
   border-radius: 15px;
 }
 
-.follower-photo {
+.following-photo {
   height: 50px;
   border-radius: 50%;
 }
@@ -110,34 +110,34 @@ h1 {
     width: 320px;
   }
 
-  .follower {
+  .follow {
     width: 250px;
   }
 
-  .follower-photo {
+  .following-photo {
     height: 80px;
   }
 }
 
 @media screen and (min-width: 400px) and (max-width: 600px) {
-  .follower {
+  .follow {
     width: 280px;
   }
 
-  .follower-photo {
+  .following-photo {
     height: 100px;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .follower {
+  .follow {
     flex-direction: column;
     justify-content: center;
     padding: 20px 15px;
     gap: 10px;
   }
 
-  .follower-content {
+  .following-content {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -146,9 +146,9 @@ h1 {
 }
 
 @media screen and (min-width: 600px) and (max-width: 900px) {
-  .follower {
+  .follow{
     width: 400px;
   }
 }
 
-/*# sourceMappingURL=328.css.map*/
+/*# sourceMappingURL=298.css.map*/

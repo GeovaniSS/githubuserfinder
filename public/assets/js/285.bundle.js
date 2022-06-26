@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkgithubuserfinder=self.webpackChunkgithubuserfinder||[]).push([[285],{3285:(e,n,t)=>{t.r(n),t.d(n,{default:()=>d});var u=t(9670),r=document.querySelector("#user-search"),s=document.querySelector(".button-search"),c=document.querySelector("#no-results");const d=function(){s.addEventListener("click",(function(){return(0,u.N)(r.value)})),r.addEventListener("keypress",(function(e){13===e.keyCode&&(0,u.N)(r.value)})),r.addEventListener("change",(function(){return c.style.display="none"}))}}}]);
-//# sourceMappingURL=285.bundle.js.map
