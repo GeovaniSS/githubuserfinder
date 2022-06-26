@@ -25,53 +25,65 @@ os seus repositórios, seguidores e quem ele segue.
 
 [Documentação da API](#) | [Funcionalidades](#) | [Referência](#)
 
+https://github.com/NinjaInShade/github-user-search
 
 ## Sobre 📖
 O projeto foi desenvolvido com o intuito de praticar requisições http 
 para diferentes endpoints da API do Github e para um primeiro contato com ES6 Modules 
 e empacotamento de módulos com o Webpack.
 
-[gif]() 
+[gif]([readme.mp4]) 
+## Conceitos ✏️
+  - Modularização com ES6 Modules
+  - Importações Dinâmicas
+  - Empacotamento de módulos com Webpack
+  - Code Splitting (Divisão de Código)
+  - Requisições HTTP com o Axios
+  - Uso de Token de autenticação (GitHub Personal Acess Token) no cabeçalho das requisições
+  - Variáveis de ambiente criadas com o dotenv para esconder o token de autenticação.
+  - Scroll infinito
+  - Responsividade
+
 ## Funcionalidades ⚙️
+- [x] Buscar perfis do Github pelo nome de usuário
+- [x] Visualizar informações relevantes do perfil do Github 
+- [x] Acessar e visualizar repositórios públicos do perfil do Github
+- [x] Visualizar seguidores do perfil do Github
+- [x] Visualizar perfis do Github que o usuário segue 
+- [x] Visualizar o layout em tamanhos de telas e dispositivos diferentes. 
+- [x] Exibir 5 resultados por requisição, em resposta ao scroll.
+- [x] Se qualquer informação do perfil do Github estiver vazia, exibir o texto "No twitter, "No Blog" e etc...
+- [x] Exibir mensagem de erro ao buscar um perfil inexistente.
+- [x] Exibir mensagem de erro, caso o usuário possua 0 repositórios, 0 seguidores ou 0 perfis que segue. 
 
-- [x] Requisições HTTP com Axios
-- [x] Modularização
-- [x] 
-- [x] 
+## Ferramentas 🛠️
+  - HTML5 
+  - CSS3
+  - Javascript 
+  - Axios
+  - Node Package Manager (NPM)
+  - Github API
+  - Webpack 5
+  - Dotenv 
+
+## Aprendizados
+  - Estruturação de pastas
+  - Scroll Infinito
+  - Dotenv 
+  - Autenticação
+  - CodeSplitting
 
 
-## Documentação da API
-
-#### Retorna todos os itens
-
-```http
-  GET /api/items
-```
-
-| Parâmetro   | Tipo       | Descrição                           |
-| :---------- | :--------- | :---------------------------------- |
-| `api_key` | `string` | **Obrigatório**. A chave da sua API |
-
-#### Retorna um item
-
-```http
-  GET /api/items/${id}
-```
-
-| Parâmetro   | Tipo       | Descrição                                   |
-| :---------- | :--------- | :------------------------------------------ |
-| `id`      | `string` | **Obrigatório**. O ID do item que você quer |
-
-#### add(num1, num2)
-
-Recebe dois números e retorna a sua soma.
-
+## Dificuldades
+- Encontrei dificuldades ao criar um projeto usando ES6 Modules e o Webpack devido a configuração de um único bundle no arquivo de configuração do webpack, que foi utilizado em diferentes páginas com scripts diferentes, originando conflitos no DOM e nas requisições. 
+- A solução para o problema descrito acima foi o recurso de Code Splitting (Divisão de código). Esse recurso permite a divisão do código em vários bundles que podem ser carregados sob demanda. Existem diversas abordagens para a divisão de código e uma das que foram implementadas inicialmente neste projeto foi a divisão do código em diferentes entry points que foram carregados manualmente em páginas distintas. 
+- No entanto, a solução inicial foi substituída por outra estratégia devido a dificuldade de carregar os bundles manualmente e a falta de flexibilidade, caso outros entry points fossem criados. 
+- Sendo assim, a outra técnica de divisão de código utilizada foram as Dynamic Imports (Importações Dinâmicas) que permitem carregar um módulo em qualquer lugar do código. Dessa forma, foi criado um módulo específico para carregar os outros módulos sob demanda, realizando uma importação condicional de acordo com a url da página. 
 
 ## Referência
 
- - [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
- - [Awesome README](https://github.com/matiassingers/awesome-readme)
- - [How to write a Good readme](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
+ - [Frontend Mentor Project](https://www.frontendmentor.io/challenges/github-user-search-app-Q09YOgaH6)
+ - [Github API](https://docs.github.com/en/rest)
 
 
 ## 🔗 Links
