@@ -1,18 +1,19 @@
 import requestGitHubUser  from './requestGitHubUser';
 import renderGitHubUser from './renderGitHubUser';
 
-const showErrorMessage = () => {
-  const errorMessage = document.querySelector('#no-results')
-  errorMessage.style.display = 'block'
-}
+const noResultsMsg = document.querySelector('#no-results')
+
+const showNoResultsMsg = () => noResultsMsg.style.display = 'block'
+
+const saveGitHubUserIntoLocalStorage = user => localStorage.setItem('user', user)
 
 const searchGitHubUser = async(user) => {
   const gitHubUser = await requestGitHubUser(user)
 
-  if(!gitHubUser) return showErrorMessage()
+  if(!gitHubUser) return showNoResultsMsg()
 
   renderGitHubUser(gitHubUser)
-  localStorage.setItem('user', user)
+  saveGitHubUserIntoLocalStorage(user)
 }
 
 export default searchGitHubUser
