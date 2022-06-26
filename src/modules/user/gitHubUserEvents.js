@@ -1,14 +1,16 @@
 import '../../assets/css/responsive.css'
 import searchGitHubUser from './searchGitHubUser'
 
-const userSearch = document.querySelector('#user-search')
+const userSearchInput = document.querySelector('#user-search')
 const btnSearch = document.querySelector('.button-search')
-const errorMessage = document.querySelector('#no-results')
+const noResultsMsg = document.querySelector('#no-results')
+
+const hideNoResultsMsg = () => noResultsMsg.style.display = 'none'
 
 export default () => {
-  btnSearch.addEventListener('click', () => searchGitHubUser(userSearch.value))
-  userSearch.addEventListener('keypress', (e) => {
-    if(e.keyCode === 13) searchGitHubUser(userSearch.value)
+  btnSearch.addEventListener('click', () => searchGitHubUser(userSearchInput.value))
+  userSearchInput.addEventListener('keypress', (e) => {
+    if(e.keyCode === 13) searchGitHubUser(userSearchInput.value)
   })
-  userSearch.addEventListener('change', () => errorMessage.style.display = 'none')
+  userSearchInput.addEventListener('change', () => hideNoResultsMsg())
 }
