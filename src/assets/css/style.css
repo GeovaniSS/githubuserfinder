@@ -17,8 +17,7 @@
   --card-color: #1E2A47;
   --icon-color: #304988;
   --text-color: #fff;
-  --bla2: #1F2A41;
-  --bla: #0079FF;
+  --error-text-color: #ff0000;
 }
 
 html {
@@ -27,7 +26,7 @@ html {
 
 body {
   font-family: 'Space Mono', monospace;
-  color: #fff;
+  color: var(--text-color);
   background-color: var(--bg-color);
   font-size: 1.6rem;
 }
@@ -39,14 +38,14 @@ h4 {
 input, input::placeholder, button {
   font-family: 'Space Mono';
   font-size: 1.6rem;
-  color: #fff;
+  color: var(--text-color);
   outline: none;
   border: none;
 }
 
 a {
   text-decoration: none;
-  color: #fff;
+  color: var(--text-color);
 }
 
 .container {
@@ -60,7 +59,7 @@ a {
 }
 
 .error {
-  color: red;
+  color: var(--error-text-color);
   text-align: center;
   font-size: 2.5rem;
 }
