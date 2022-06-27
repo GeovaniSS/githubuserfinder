@@ -1,6 +1,5 @@
 # Github User Finder
 
-## Sumário
 - [Demonstração](#💻-demonstração)
 - [Sobre](#📖-sobre)
 - [Funcionalidades](#⚙️-funcionalidades)
@@ -19,7 +18,6 @@
 [gif](readme.mp4) 
 
 > Github User Finder :octocat: é uma ferramenta de busca de perfis do Github.
-***
 
 ## 📖 Sobre 
 
@@ -191,10 +189,7 @@ Consulte a documentação do Github em [como criar uma solicitação pull](https
   <tr>
     <td align="center">
       <a href="https://www.linkedin.com/in/geovani-silva-21298921b/">
-        <img src="https://avatars3.githubusercontent.com/u/31936044" width="100px;" alt="Foto do Geovani Silva no GitHub"/><br>
-        <sub>
-          <b>Geovani Silva</b>
-        </sub>
+        <img src="https://avatars.githubusercontent.com/u/90160888?v=4" width="100px;" alt="Foto do Geovani Silva no GitHub"/><br>
       </a>
     </td>
   </tr>
