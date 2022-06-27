@@ -5,7 +5,7 @@
 ![Bitbucket open issues](https://img.shields.io/bitbucket/issues/GeovaniSS/githubuserfinder?style=for-the-badge)
 ![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr/GeovaniSS/githubuserfinder?style=for-the-badge)
 
-[Demonstração](#💻-demonstração) | [Sobre](#📖-sobre) | [Funcionalidades](#⚙️-funcionalidades) | [Aprendizados](#✏️-aprendizados) | [Ferramentas](#🛠️-ferramentas) | [Instalação](#🚀-instalação) | [Como contribuir](#📫-como-contribuir) | [Autor](#👨‍💻-autor)
+[Demonstração](#demonstração) | [Sobre](#📖-sobre) | [Funcionalidades](#⚙️-funcionalidades) | [Aprendizados](#✏️-aprendizados) | [Ferramentas](#🛠️-ferramentas) | [Instalação](#🚀-instalação) | [Como contribuir](#📫-como-contribuir) | [Autor](#👨‍💻-autor)
 
 - [Demonstração](#💻-demonstração)
 - [Sobre](#📖-sobre)
@@ -21,7 +21,7 @@
 - [Como contribuir](#📫-como-contribuir)
 - [Autor](#👨‍💻-autor)
 
-## 💻 Demonstração
+## Demonstração
 https://user-images.githubusercontent.com/90160888/176004087-f5c44263-d30d-4b19-ab24-4979a55a3a9b.mp4
 > Github User Finder :octocat: é uma ferramenta de busca de perfis do Github.
 
