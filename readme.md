@@ -1,12 +1,19 @@
-# Github User Finder 
+# Github User Finder :octocat:
 
-Github User Finder é uma ferramenta de busca de perfis do Github.
+Github User Finder :octocat: é uma ferramenta de busca de perfis do Github.
 
-[Sobre](#sobre-📖)
-[Funcionalidades](#⚙️-funcionalidades)
-[Aprendizados](#✏️-aprendizados)
-[Ferramentas](#🛠️-ferramentas)
-[Referências](#referências)
+- [Sobre](#sobre-📖)
+- [Funcionalidades](#⚙️-funcionalidades)
+- [Aprendizados](#✏️-aprendizados)
+  -[Conceitos](#conceitos)
+  -[Descrição](#descrição)
+    -[Módulos](#módulos)
+    -[Requisições](#requisições)
+    -[Scroll Infinito](#scroll-infinito)
+- [Ferramentas](#🛠️-ferramentas)
+- [Instalação](#🚀-instalação)
+- [Como contribuir](#📫-como-contribuir)
+- [Referências](#🔗-referências)
 
 ## Sobre 📖
 
@@ -26,7 +33,7 @@ O projeto não é totalmente autoral. Eu me inspirei na versão do [Frontend Men
 - [x] Visualizar perfis do Github que o usuário segue.
 - [x] Visualizar o layout em tamanhos de telas e dispositivos diferentes. 
 - [x] Carregar resultados em resposta ao scroll do usuário.
-- [x] Se qualquer informação do perfil do Github estiver vazia, exibir texto alternativo como "No twitter, "No Blog" e etc.
+- [x] Se qualquer informação do perfil do Github estiver vazia, exibir texto alternativo como "No twitter, "No Blog".
 - [x] Exibir mensagem de erro ao buscar um perfil inexistente.
 - [x] Exibir mensagem de erro, caso o usuário não siga nenhum perfil ou não possua repositórios e/ou seguidores. 
 
@@ -120,7 +127,7 @@ Por fim, foi de grande aprendizado implementar neste projeto a técnica de Scrol
 
 Esse recurso foi implementado na página dos repositórios, seguidores e dos perfis que o usuário segue para evitar o carregamento prolongado de todos os resultados e melhorar a experiência do usuário. Quando o scroll se aproxima do fim do card, uma nova requisição é feita para buscar mais dados e os resultados são concatenados com os que já existiam na lista. 
 
-Para que a técnica de Scroll infinito funcione é necessário passar os parâmetros *per_page* e o parâmetro *page* na URL da requisição para a API do Github, além de implementar a lógica do scroll.  
+Para que a técnica de Scroll infinito funcione é necessário passar os parâmetros *per_page* e *page* na URL da requisição para a API do Github, além de implementar a lógica do scroll.  
 ```js 
   axios(`https://api.github.com/users/${user}/repos?&per_page=5&page=${page}`)
 ```
@@ -133,18 +140,21 @@ Para que a técnica de Scroll infinito funcione é necessário passar os parâme
   - Node Package Manager (NPM)
   - [Github API](https://docs.github.com/en/rest)
   - [Webpack 5](https://webpack.js.org/)
-  - [Dotenv](https://github.com/motdotla/dotenv) 
+  - [DotEnv](https://github.com/motdotla/dotenv) 
 
 ## 🚀 Instalação
-```
+```bash
   # Clone o repositório
   $ git clone https://github.com/GeovaniSS/githubuserfinder
   
   # Instale as dependências
   $ npm install
 
-  # Faça o build do projeto
+  # Faça a build do projeto
   $ npm run build 
+
+  # Inicie o servidor
+  $ npm run dev
 ```
 
 ## 📫 Como contribuir
@@ -154,10 +164,12 @@ Para contribuir com esse projeto, faça os seguintes passos:
   3. Realize as alterações e confirme: `git commit -m '<mensagem_commit>'`.
   4. Envie para o repositório original: `git push origin <nome_projeto> / <local>`.
   5. Envie a solicitação de pull
+
 Consulte a documentação do Github em [como criar uma solicitação pull](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)
 
-## Referências
+## 🔗 Referências
  - [Frontend Mentor Project](https://www.frontendmentor.io/challenges/github-user-search-app-Q09YOgaH6)
  - [Github API](https://docs.github.com/en/rest)
+ - [Webpack](https://webpack.js.org/)
 
 Feito com 💙 e ☕ por [Geovani Silva](https://www.linkedin.com/in/geovani-silva-21298921b/)
