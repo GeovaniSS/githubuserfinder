@@ -5,18 +5,18 @@ Github User Finder :octocat: é uma ferramenta de busca de perfis do Github.
 [gif](readme.mp4) 
 
 ## Menu 
-- [Sobre](#sobre-📖)
-- [Funcionalidades](#⚙️-funcionalidades)
-- [Aprendizados](#✏️-aprendizados)
+- [Sobre](#sobre)
+- [Funcionalidades](#funcionalidades)
+- [Aprendizados](#aprendizados)
   * [Conceitos](#conceitos)
   * [Descrição](#descrição)
     + [Módulos](#módulos)
     + [Requisições](#requisições)
     + [Scroll Infinito](#scroll-infinito)
-- [Ferramentas](#🛠️-ferramentas)
-- [Instalação](#🚀-instalação)
-- [Como contribuir](#📫-como-contribuir)
-- [Referências](#🔗-referências)
+- [Ferramentas](#ferramentas)
+- [Instalação](#instalação)
+- [Como contribuir](#como-contribuir)
+- [Referências](#referências)
 
 <!-- <ul> 
   <li><a href="#sobre-📖">Sobre</a></li>
@@ -37,7 +37,7 @@ Github User Finder :octocat: é uma ferramenta de busca de perfis do Github.
   <li><a href="#🔗-referências">Referências</a></li>
 </ul> -->
 
-## Sobre 📖
+## 📖 Sobre 
 
 Esse projeto é uma ferramenta de busca de perfis do Github, que permite visualizar informações relevantes do perfil do usuário, além dos repositórios, seguidores e perfis que o usuário segue. 
 
