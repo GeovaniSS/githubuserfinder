@@ -2,18 +2,18 @@
 
 Github User Finder :octocat: é uma ferramenta de busca de perfis do Github.
 
-- [Sobre](#sobre-📖)
-- [Funcionalidades](#⚙️-funcionalidades)
-- [Aprendizados](#✏️-aprendizados)
-  -[Conceitos](#conceitos)
-  -[Descrição](#descrição)
-    -[Módulos](#módulos)
-    -[Requisições](#requisições)
-    -[Scroll Infinito](#scroll-infinito)
-- [Ferramentas](#🛠️-ferramentas)
-- [Instalação](#🚀-instalação)
-- [Como contribuir](#📫-como-contribuir)
-- [Referências](#🔗-referências)
+1. [Sobre](#sobre-📖)
+2. [Funcionalidades](#⚙️-funcionalidades)
+3. [Aprendizados](#✏️-aprendizados)
+  1. [Conceitos](#conceitos)
+  2. [Descrição](#descrição)
+    1. [Módulos](#módulos)
+    2. [Requisições](#requisições)
+    3. [Scroll Infinito](#scroll-infinito)
+4. [Ferramentas](#🛠️-ferramentas)
+5. [Instalação](#🚀-instalação)
+6. [Como contribuir](#📫-como-contribuir)
+7. [Referências](#🔗-referências)
 
 ## Sobre 📖
 
