@@ -1,4 +1,9 @@
 # Github User Finder
+![Github repo size](https://img.shields.io/github/repo-size/GeovaniSS/githubuserfinder)
+![Github language count](https://img.shields.io/github/languages/count/GeovaniSS/githubuserfinder)
+![Github forks](https://img.shields.io/github/forks/GeovaniSS/githubuserfinder?style=plastic)
+![Bitbucket open issues](https://img.shields.io/bitbucket/issues/GeovaniSS/githubuserfinder)
+![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr/GeovaniSS/githubuserfinder)
 
 - [Demonstração](#💻-demonstração)
 - [Sobre](#📖-sobre)
@@ -194,4 +199,5 @@ Consulte a documentação do Github em [como criar uma solicitação pull](https
     </td>
   </tr>
 </table>
-Feito com 💙 e ☕ por Geovani Silva
+
+Feito com 💙 e ☕ por [Geovani Silva](https://www.linkedin.com/in/geovani-silva-21298921b/)
