@@ -2,40 +2,21 @@
 
 Github User Finder :octocat: é uma ferramenta de busca de perfis do Github.
 
-[gif](readme.mp4) 
-
-## Menu 
-- [Sobre](#sobre)
-- [Funcionalidades](#funcionalidades)
-- [Aprendizados](#aprendizados)
+## Sumário
+- [Sobre](#📖-sobre)
+- [Funcionalidades](#⚙️-funcionalidades)
+- [Aprendizados](#✏️-aprendizados)
   * [Conceitos](#conceitos)
   * [Descrição](#descrição)
     + [Módulos](#módulos)
     + [Requisições](#requisições)
     + [Scroll Infinito](#scroll-infinito)
-- [Ferramentas](#ferramentas)
-- [Instalação](#instalação)
-- [Como contribuir](#como-contribuir)
-- [Referências](#referências)
+- [Ferramentas](#🛠️-ferramentas)
+- [Instalação](#🚀-instalação)
+- [Como contribuir](#📫-como-contribuir)
 
-<!-- <ul> 
-  <li><a href="#sobre-📖">Sobre</a></li>
-  <li><a href="#⚙️-funcionalidades">Funcionalidades</a></li>
-  <li><a href="#✏️-aprendizados">Aprendizados</a></li>
-  <ul>
-    <li><a href="#conceitos">Conceitos</a></li>
-    <li><a href="#descrição">Descrição</a></li>
-    <ul> 
-     <li><a href="#conceitos">Módulos</a></li>
-     <li><a href="#requisições">Requisições</a></li>
-     <li><a href="#scroll-infinito">Scroll Infinito</a></li>
-    </ul>
-  </ul>
-  <li><a href="#🛠️-ferramentas">Ferramentas</a></li>
-  <li><a href="#🚀-instalação">Instalação</a></li>
-  <li><a href="#📫-como-contribuir">Como contribuir</a></li>
-  <li><a href="#🔗-referências">Referências</a></li>
-</ul> -->
+[gif](readme.mp4) 
+***
 
 ## 📖 Sobre 
 
@@ -167,11 +148,12 @@ Para que a técnica de Scroll infinito funcione é necessário passar os parâme
 ```
 
 ## 🛠️ Ferramentas
-  - HTML5 
-  - CSS3
-  - Javascript 
+  As seguintes ferramentas foram usadas na construção do projeto: 
+  - [HTML5](https://developer.mozilla.org/pt-BR/docs/Web/HTML) 
+  - [CSS3](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
+  - [Javascript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript) 
   - [Axios](https://axios-http.com/ptbr/docs/intro)
-  - Node Package Manager (NPM)
+  - [NPM](https://www.npmjs.com/)
   - [Github API](https://docs.github.com/en/rest)
   - [Webpack 5](https://webpack.js.org/)
   - [DotEnv](https://github.com/motdotla/dotenv) 
@@ -200,10 +182,5 @@ Para contribuir com esse projeto, faça os seguintes passos:
   5. Envie a solicitação de pull
 
 Consulte a documentação do Github em [como criar uma solicitação pull](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)
-
-## 🔗 Referências
- - [Frontend Mentor Project](https://www.frontendmentor.io/challenges/github-user-search-app-Q09YOgaH6)
- - [Github API](https://docs.github.com/en/rest)
- - [Webpack](https://webpack.js.org/)
 
 Feito com 💙 e ☕ por [Geovani Silva](https://www.linkedin.com/in/geovani-silva-21298921b/)
