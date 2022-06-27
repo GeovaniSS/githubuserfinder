@@ -1,31 +1,29 @@
 # Github User Finder
 ![Github repo size](https://img.shields.io/github/repo-size/GeovaniSS/githubuserfinder?style=for-the-badge)
 ![Github language count](https://img.shields.io/github/languages/count/GeovaniSS/githubuserfinder?style=for-the-badge)
-![Github forks](https://img.shields.io/github/forks/GeovaniSS/githubuserfinder?style=plastic?style=for-the-badge)
+![Github forks](https://img.shields.io/github/forks/GeovaniSS/githubuserfinder?style=for-the-badge)
 ![Bitbucket open issues](https://img.shields.io/bitbucket/issues/GeovaniSS/githubuserfinder?style=for-the-badge)
 ![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr/GeovaniSS/githubuserfinder?style=for-the-badge)
 
-[Demonstração](#octocat-demonstração) | [Sobre](#📖-sobre) | [Funcionalidades](#⚙️-funcionalidades) | [Aprendizados](#✏️-aprendizados) | [Ferramentas](#🛠️-ferramentas) | [Instalação](#🚀-instalação) | [Como contribuir](#📫-como-contribuir) | [Autor](#👨‍💻-autor)
-
-- [Demonstração](#💻-demonstração)
-- [Sobre](#📖-sobre)
-- [Funcionalidades](#⚙️-funcionalidades)
-- [Aprendizados](#✏️-aprendizados)
+- [Demonstração](#computer-demonstração)
+- [Sobre](#book-sobre)
+- [Funcionalidades](#gear-funcionalidades)
+- [Aprendizados](#pencil2-aprendizados)
   * [Conceitos](#conceitos)
   * [Descrição](#descrição)
     + [Módulos](#módulos)
     + [Requisições](#requisições)
     + [Scroll Infinito](#scroll-infinito)
-- [Ferramentas](#🛠️-ferramentas)
-- [Instalação](#🚀-instalação)
-- [Como contribuir](#📫-como-contribuir)
-- [Autor](#👨‍💻-autor)
+- [Ferramentas](#hammerandwrench-ferramentas)
+- [Instalação](#rocket-instalação)
+- [Como contribuir](#mailbox-como-contribuir)
+- [Autor](#technologist-autor)
 
-## :octocat: Demonstração
+## :computer: Demonstração
 https://user-images.githubusercontent.com/90160888/176004087-f5c44263-d30d-4b19-ab24-4979a55a3a9b.mp4
-> Github User Finder :octocat: é uma ferramenta de busca de perfis do Github.
+> Github User Finder :octocat:  é uma ferramenta de busca de perfis do Github.
 
-## 📖 Sobre 
+## :book: Sobre 
 
 Esse projeto é uma ferramenta de busca de perfis do Github, que permite visualizar informações relevantes do perfil do usuário, além dos repositórios, seguidores e perfis que o usuário segue. 
 
@@ -33,7 +31,7 @@ O objetivo foi praticar o consumo de diferentes endpoints da API do Github e cri
 
 O projeto não é totalmente autoral. Eu me inspirei na versão do [Frontend Mentor](https://www.frontendmentor.io/challenges/github-user-search-app-Q09YOgaH6), implementei mudanças na página inicial e acrescentei outros inúmeros recursos que serão listados mais abaixo. 
 
-## ⚙️ Funcionalidades
+## :gear: Funcionalidades
 - [x] Buscar perfis do Github pelo nome de usuário.
 - [x] Visualizar informações relevantes do perfil do Github. 
 - [x] Acessar e visualizar repositórios públicos do perfil do Github.
@@ -45,7 +43,7 @@ O projeto não é totalmente autoral. Eu me inspirei na versão do [Frontend Men
 - [x] Exibir mensagem de erro ao buscar um perfil inexistente.
 - [x] Exibir mensagem de erro, caso o usuário não siga nenhum perfil ou não possua repositórios e/ou seguidores. 
 
-## ✏️ Aprendizados
+## :pencil2: Aprendizados
 
 ### Conceitos
 Principais conceitos/recursos que aprendi durante o desenvolvimento do projeto: 
@@ -154,7 +152,7 @@ Para que a técnica de Scroll infinito funcione é necessário passar os parâme
   axios(`https://api.github.com/users/${user}/repos?&per_page=5&page=${page}`)
 ```
 
-## 🛠️ Ferramentas
+## :hammer_and_wrench: Ferramentas
   As seguintes ferramentas foram usadas na construção do projeto: 
   - [HTML5](https://developer.mozilla.org/pt-BR/docs/Web/HTML) 
   - [CSS3](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
@@ -165,7 +163,7 @@ Para que a técnica de Scroll infinito funcione é necessário passar os parâme
   - [Webpack 5](https://webpack.js.org/)
   - [DotEnv](https://github.com/motdotla/dotenv) 
 
-## 🚀 Instalação
+## :rocket: Instalação
 ```bash
   # Clone o repositório
   $ git clone https://github.com/GeovaniSS/githubuserfinder
@@ -180,7 +178,7 @@ Para que a técnica de Scroll infinito funcione é necessário passar os parâme
   $ npm run dev
 ```
 
-## 📫 Como contribuir
+## :mailbox: Como contribuir
 Para contribuir com esse projeto, faça os seguintes passos: 
   1. Bifurque este repositório.
   2. Crie uma branch: `git checkout -b <nome_branch>`.
@@ -190,7 +188,7 @@ Para contribuir com esse projeto, faça os seguintes passos:
 
 Consulte a documentação do Github em [como criar uma solicitação pull](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)
 
-## 👨‍💻 Autor
+## :technologist: Autor
 <table>
   <tr>
     <td align="center">
