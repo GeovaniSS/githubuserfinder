@@ -1,8 +1,7 @@
 # Github User Finder
 
-Github User Finder :octocat: é uma ferramenta de busca de perfis do Github.
-
 ## Sumário
+- [Demonstração](#💻-demonstração)
 - [Sobre](#📖-sobre)
 - [Funcionalidades](#⚙️-funcionalidades)
 - [Aprendizados](#✏️-aprendizados)
@@ -14,8 +13,12 @@ Github User Finder :octocat: é uma ferramenta de busca de perfis do Github.
 - [Ferramentas](#🛠️-ferramentas)
 - [Instalação](#🚀-instalação)
 - [Como contribuir](#📫-como-contribuir)
+- [Autor](#👨‍💻-autor)
 
+## 💻 Demonstração
 [gif](readme.mp4) 
+
+> Github User Finder :octocat: é uma ferramenta de busca de perfis do Github.
 ***
 
 ## 📖 Sobre 
@@ -183,4 +186,17 @@ Para contribuir com esse projeto, faça os seguintes passos:
 
 Consulte a documentação do Github em [como criar uma solicitação pull](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)
 
-Feito com 💙 e ☕ por [Geovani Silva](https://www.linkedin.com/in/geovani-silva-21298921b/)
+## 👨‍💻 Autor
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://www.linkedin.com/in/geovani-silva-21298921b/">
+        <img src="https://avatars3.githubusercontent.com/u/31936044" width="100px;" alt="Foto do Geovani Silva no GitHub"/><br>
+        <sub>
+          <b>Geovani Silva</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
+Feito com 💙 e ☕ por Geovani Silva
