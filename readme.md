@@ -1,92 +1,140 @@
-# Github User Finder
+# Github User Finder 
 
-Configuração do Axios 
- - axios.create()
- - baseURL
- - Token de autenticação no header da requisição
+Github User Finder é uma ferramenta de busca de perfis do Github.
 
-Problema do Webpack ao usar o dotenv e nodepolyfill
-- https://gist.github.com/ef4/d2cf5672a93cf241fd47c020b9b3066a
-
-Token e Dotenv e Plugin do Dotenv no Webpack
-- https://www.devmedia.com.br/consumindo-uma-api-com-react-js-e-axios/42900#:~:text=Para%20enviar%20um%20token%20atrav%C3%A9s%20do%20Axios%20fazemos%20conforme%20o%20C%C3%B3digo%208.&text=Essa%20valida%C3%A7%C3%A3o%20deve%20ser%20inserida,um%20validador%20para%20o%20usu%C3%A1rio.
-- https://www.freecodecamp.org/portuguese/news/como-usar-variaveis-de-ambiente-do-node-com-um-arquivo-dotenv-para-node-js-e-npm/#:~:text=Como%20criar%20vari%C3%A1veis%20de%20ambiente,uma%20vari%C3%A1vel%20ao%20objeto%20process.
-- https://www.npmjs.com/package/dotenv
-- https://www.npmjs.com/package/dotenv-webpack
-
-Scroll Infinito 
-- Parâmetro per_page=100 e page=?
-- https://docs.github.com/pt/rest/guides/traversing-with-pagination
-- https://www.youtube.com/watch?v=NnjDJt68uLs
-- https://www.youtube.com/watch?v=IjaXyQwl4no
-
-Esse projeto é um buscador de perfis do Github, que mostra as informações do perfil do usuário, 
-os seus repositórios, seguidores e quem ele segue. 
-
-[Documentação da API](#) | [Funcionalidades](#) | [Referência](#)
-
-https://github.com/NinjaInShade/github-user-search
+[Sobre](#sobre-📖) | [Conceitos](#✏️-conceitos) | [Funcionalidades](#⚙️-funcionalidades) | [Ferramentas](#🛠️-ferramentas) | [Aprendizados](#aprendizados) | [Dificuldades](#dificuldades) | [Referências](#referências)
 
 ## Sobre 📖
-O projeto foi desenvolvido com o intuito de praticar requisições http 
-para diferentes endpoints da API do Github e para um primeiro contato com ES6 Modules 
-e empacotamento de módulos com o Webpack.
+
+Esse projeto é uma ferramenta de busca de perfis do Github, que permite visualizar informações relevantes do perfil do usuário, além dos seus repositórios, seguidores e perfis que o usuário segue. 
 
 [gif]([readme.mp4]) 
-## Conceitos ✏️
-  - Modularização com ES6 Modules
-  - Importações Dinâmicas
-  - Empacotamento de módulos com Webpack
-  - Code Splitting (Divisão de Código)
-  - Requisições HTTP com o Axios
-  - Uso de Token de autenticação (GitHub Personal Acess Token) no cabeçalho das requisições
-  - Variáveis de ambiente criadas com o dotenv para esconder o token de autenticação.
-  - Scroll infinito
-  - Responsividade
 
-## Funcionalidades ⚙️
-- [x] Buscar perfis do Github pelo nome de usuário
-- [x] Visualizar informações relevantes do perfil do Github 
-- [x] Acessar e visualizar repositórios públicos do perfil do Github
-- [x] Visualizar seguidores do perfil do Github
-- [x] Visualizar perfis do Github que o usuário segue 
+O objetivo foi praticar o consumo de diferentes endpoints da API do Github e criar um projeto modularizado com ES6 Modules e o Webpack.
+
+O projeto não é totalmente autoral. Eu me inspirei na versão do [Frontend Mentor](https://www.frontendmentor.io/challenges/github-user-search-app-Q09YOgaH6), implementei mudanças na página inicial e acrescentei outros inúmeros recursos que serão listados mais abaixo. 
+
+## ⚙️ Funcionalidades
+- [x] Buscar perfis do Github pelo nome de usuário.
+- [x] Visualizar informações relevantes do perfil do Github. 
+- [x] Acessar e visualizar repositórios públicos do perfil do Github.
+- [x] Visualizar seguidores do perfil do Github.
+- [x] Visualizar perfis do Github que o usuário segue.
 - [x] Visualizar o layout em tamanhos de telas e dispositivos diferentes. 
-- [x] Exibir 5 resultados por requisição, em resposta ao scroll.
-- [x] Se qualquer informação do perfil do Github estiver vazia, exibir o texto "No twitter, "No Blog" e etc...
+- [x] Carregar resultados em resposta ao scroll do usuário.
+- [x] Se qualquer informação do perfil do Github estiver vazia, exibir texto alternativo como "No twitter, "No Blog" e etc.
 - [x] Exibir mensagem de erro ao buscar um perfil inexistente.
-- [x] Exibir mensagem de erro, caso o usuário possua 0 repositórios, 0 seguidores ou 0 perfis que segue. 
+- [x] Exibir mensagem de erro, caso o usuário não siga nenhum perfil ou não possua repositórios e/ou seguidores. 
 
-## Ferramentas 🛠️
+## ✏️ Aprendizados
+
+  ### Conceitos
+  Principais conceitos/recursos aplicados no projeto: 
+    - Modularização com ES6 Modules
+    - Importações Dinâmicas
+    - Empacotamento de módulos com Webpack
+    - Code Splitting (Divisão de Código)
+    - Requisições HTTP para diferentes endpoints com a biblioteca do Axios
+    - Uso de Token de autenticação pessoal no cabeçalho das requisições
+    - Variáveis de ambiente criadas com o pacote DotEnv
+    - Scroll infinito
+
+  ### Descrição
+
+  #### Módulos
+  Esse projeto me rendeu grandes aprendizados devido aos problemas que surgiram durante o seu desenvolvimento. Foi um dos primeiros projetos na qual utilizei a Modularização com ES6 Modules e a abordagem de cada módulo possuir uma função/ação específica. 
+
+  Também me deparei com algumas [dificuldades](#dificuldades) que pareciam impossíveis de serem solucionadas. Por conta disso, tive que me aprofundar em alguns assuntos e aprendi recursos novos como a técnica de Code Splitting (Divisão de Código) suportada pelo Webpack e as Dynamic Imports (Importações Dinâmicas).
+
+  #### Requisições
+  As requisições para diferentes endpoints da API do Github não foi uma tarefa complicada. Porém, inicialmente eu estava realizando requisições não autenticadas e a API do Github permite até 60 requisições por hora de usuários não autenticados. 
+  
+  Por ser uma quantidade muito pequena para testes durante o desenvolvimento busquei autenticar as requisições usando um [token de acesso pessoal](#https://docs.github.com/pt/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) para ter a possibilidade de realizar até 5000 requisições por hora.
+
+  No entanto, não é nada recomendado embutir o token de autentição em um variável pública do seu código. Os tokens são como senhas e devem ser mantidos em segredo.
+
+  Para esse fim, eu utilizei o pacote [DotEnv](https://github.com/motdotla/dotenv) e criei o token como uma variável de ambiente em um arquivo .env:
+  ```js
+    // Arquivo .env
+    AUTH_TOKEN = eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9 // Token fictício
+  ```
+
+  O DotEnv carrega as variáveis de ambiente definidas no arquivo .env para o objeto process.env do Node:
+  ```js
+    require('dotenv').config() 
+    const token = process.env.AUTH_TOKEN
+  ```
+
+  Para enviar o token no cabeçalho da requisição através do Axios, eu fiz da seguinte forma: 
+  ```js
+    const gitHubApi = axios.create({ 
+      baseURL: "https://api.github.com/users"
+    })
+
+    gitHubApi.defaults.headers.authorization = `Bearer ${token}`;
+  ```
+  #### Scroll Infinito
+  Por fim, foi de grande aprendizado implementar neste projeto a técnica de Scroll Infinito. Essa técnica consiste em exibir os resultados em resposta ao scroll do usuário na página ou em um elemento. 
+  
+  Esse recurso foi implementado na página dos repositórios, seguidores e dos perfis que o usuário segue para evitar o carregamento prolongado de todos os resultados e melhorar a experiência do usuário. Quando o scroll se aproxima do fim do card, uma nova requisição é feita para buscar mais dados, e os resultados são concatenados com os que já existiam na lista. 
+  
+  Para que a técnica de Scroll infinito funcione é necessário passar os parâmetros *per_page* e *page* na URL da requisição para a API do Github, além de implementar a lógica.  
+  ```js 
+    axios(`https://api.github.com/users/${user}/repos?&per_page=5&page=${page}`)
+  ```
+## Dificuldades
+
+Encontrei dificuldades ao criar esse projeto usando ES6 Modules e o Webpack devido a utilização de um único bundle no arquivo de configuração do webpack, que foi utilizado em diferentes páginas com scripts diferentes, originando conflitos no DOM e nas requisições. 
+
+A solução para o problema descrito acima foi o recurso de Code Splitting (Divisão de código). Esse recurso permite a divisão do código em vários bundles que podem ser carregados sob demanda. Existem diversas abordagens para a divisão de código e uma das que foram implementadas inicialmente neste projeto foi a divisão do código em diferentes entry points que foram carregados manualmente em páginas distintas. 
+
+No entanto, a solução inicial foi substituída por outra estratégia devido a dificuldade de carregar os bundles manualmente e a falta de flexibilidade, caso outros entry points fossem criados. Sendo assim, a outra técnica de divisão de código utilizada foram as Dynamic Imports (Importações Dinâmicas) que permitem carregar um módulo em qualquer lugar do código. 
+
+Dessa forma, foi criado um módulo específico para carregar os outros módulos sob demanda, realizando uma importação condicional de acordo com a url da página. 
+```js
+  export default async() => {
+    const url = location.href
+
+    const isIndexPage = url.includes('index.html')
+    const isReposPage = url.includes('repos.html')
+    const isFollowersPage = url.includes('followers.html')
+    const isFollowingPage = url.includes('following.html')
+
+    if(isIndexPage) { 
+      const { default: gitHubUserEvents } = await import('./modules/user/gitHubUserEvents')
+      gitHubUserEvents()
+    }
+
+    if(isReposPage) {
+      const { searchGitHubUserRepos } = await import('./modules/repos/searchGitHubUserRepos')
+      searchGitHubUserRepos()
+    }
+
+    if(isFollowersPage) {
+      const { searchGitHubUserFollowers } = await import('./modules/followers/searchGitHubUserFollowers')
+      searchGitHubUserFollowers()
+    }
+
+    if(isFollowingPage) {
+      const { searchGitHubUserFollowing } = await import('./modules/following/searchGitHubUserFollowing')
+      searchGitHubUserFollowing()
+    }
+  }
+```
+
+## 🛠️ Ferramentas
   - HTML5 
   - CSS3
   - Javascript 
-  - Axios
+  - [Axios](https://axios-http.com/ptbr/docs/intro)
   - Node Package Manager (NPM)
-  - Github API
-  - Webpack 5
-  - Dotenv 
+  - [Github API](https://docs.github.com/en/rest)
+  - [Webpack 5](https://webpack.js.org/)
+  - [Dotenv](https://github.com/motdotla/dotenv) 
 
-## Aprendizados
-  - Estruturação de pastas
-  - Scroll Infinito
-  - Dotenv 
-  - Autenticação
-  - CodeSplitting
-
-
-## Dificuldades
-- Encontrei dificuldades ao criar um projeto usando ES6 Modules e o Webpack devido a configuração de um único bundle no arquivo de configuração do webpack, que foi utilizado em diferentes páginas com scripts diferentes, originando conflitos no DOM e nas requisições. 
-- A solução para o problema descrito acima foi o recurso de Code Splitting (Divisão de código). Esse recurso permite a divisão do código em vários bundles que podem ser carregados sob demanda. Existem diversas abordagens para a divisão de código e uma das que foram implementadas inicialmente neste projeto foi a divisão do código em diferentes entry points que foram carregados manualmente em páginas distintas. 
-- No entanto, a solução inicial foi substituída por outra estratégia devido a dificuldade de carregar os bundles manualmente e a falta de flexibilidade, caso outros entry points fossem criados. 
-- Sendo assim, a outra técnica de divisão de código utilizada foram as Dynamic Imports (Importações Dinâmicas) que permitem carregar um módulo em qualquer lugar do código. Dessa forma, foi criado um módulo específico para carregar os outros módulos sob demanda, realizando uma importação condicional de acordo com a url da página. 
-
-## Referência
+## Referências
 
  - [Frontend Mentor Project](https://www.frontendmentor.io/challenges/github-user-search-app-Q09YOgaH6)
  - [Github API](https://docs.github.com/en/rest)
 
-
-## 🔗 Links
-[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://katherinempeterson.com/)
-[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/)
-[![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/)
+Feito com 💙 e ☕ por [Geovani Silva](https://www.linkedin.com/in/geovani-silva-21298921b/)
