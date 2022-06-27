@@ -1,9 +1,9 @@
 # Github User Finder
-![Github repo size](https://img.shields.io/github/repo-size/GeovaniSS/githubuserfinder)
-![Github language count](https://img.shields.io/github/languages/count/GeovaniSS/githubuserfinder)
-![Github forks](https://img.shields.io/github/forks/GeovaniSS/githubuserfinder?style=plastic)
-![Bitbucket open issues](https://img.shields.io/bitbucket/issues/GeovaniSS/githubuserfinder)
-![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr/GeovaniSS/githubuserfinder)
+![Github repo size](https://img.shields.io/github/repo-size/GeovaniSS/githubuserfinder?style=for-the-badge)
+![Github language count](https://img.shields.io/github/languages/count/GeovaniSS/githubuserfinder?style=for-the-badge)
+![Github forks](https://img.shields.io/github/forks/GeovaniSS/githubuserfinder?style=plastic?style=for-the-badge)
+![Bitbucket open issues](https://img.shields.io/bitbucket/issues/GeovaniSS/githubuserfinder?style=for-the-badge)
+![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr/GeovaniSS/githubuserfinder?style=for-the-badge)
 
 - [Demonstração](#💻-demonstração)
 - [Sobre](#📖-sobre)
