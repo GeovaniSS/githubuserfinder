@@ -5,6 +5,8 @@
 ![Bitbucket open issues](https://img.shields.io/bitbucket/issues/GeovaniSS/githubuserfinder?style=for-the-badge)
 ![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr/GeovaniSS/githubuserfinder?style=for-the-badge)
 
+[Demonstração](#💻-demonstração) | [Sobre](#📖-sobre) | [Funcionalidades](#⚙️-funcionalidades) | [Aprendizados](#✏️-aprendizados) | [Ferramentas](#🛠️-ferramentas) | [Instalação](#🚀-instalação) | [Como contribuir](#📫-como-contribuir) | [Autor](#👨‍💻-autor)
+
 - [Demonstração](#💻-demonstração)
 - [Sobre](#📖-sobre)
 - [Funcionalidades](#⚙️-funcionalidades)
