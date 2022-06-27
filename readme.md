@@ -2,7 +2,23 @@
 
 Github User Finder :octocat: é uma ferramenta de busca de perfis do Github.
 
-<ul> 
+[gif](readme.mp4) 
+
+## Menu 
+- [Sobre](#sobre-📖)
+- [Funcionalidades](#⚙️-funcionalidades)
+- [Aprendizados](#✏️-aprendizados)
+  * [Conceitos](#conceitos)
+  * [Descrição](#descrição)
+    + [Módulos](#módulos)
+    + [Requisições](#requisições)
+    + [Scroll Infinito](#scroll-infinito)
+- [Ferramentas](#🛠️-ferramentas)
+- [Instalação](#🚀-instalação)
+- [Como contribuir](#📫-como-contribuir)
+- [Referências](#🔗-referências)
+
+<!-- <ul> 
   <li><a href="#sobre-📖">Sobre</a></li>
   <li><a href="#⚙️-funcionalidades">Funcionalidades</a></li>
   <li><a href="#✏️-aprendizados">Aprendizados</a></li>
@@ -19,13 +35,11 @@ Github User Finder :octocat: é uma ferramenta de busca de perfis do Github.
   <li><a href="#🚀-instalação">Instalação</a></li>
   <li><a href="#📫-como-contribuir">Como contribuir</a></li>
   <li><a href="#🔗-referências">Referências</a></li>
-</ul>
+</ul> -->
 
 ## Sobre 📖
 
 Esse projeto é uma ferramenta de busca de perfis do Github, que permite visualizar informações relevantes do perfil do usuário, além dos repositórios, seguidores e perfis que o usuário segue. 
-
-[gif]([readme.mp4]) 
 
 O objetivo foi praticar o consumo de diferentes endpoints da API do Github e criar um projeto modularizado com ES6 Modules e o Webpack.
 
@@ -46,7 +60,7 @@ O projeto não é totalmente autoral. Eu me inspirei na versão do [Frontend Men
 ## ✏️ Aprendizados
 
 ### Conceitos
-Principais conceitos/recursos aplicados no projeto: 
+Principais conceitos/recursos que aprendi durante o desenvolvimento do projeto: 
 - Modularização com ES6 Modules
 - Importações Dinâmicas
 - Empacotamento de módulos com Webpack
@@ -57,16 +71,30 @@ Principais conceitos/recursos aplicados no projeto:
 - Scroll infinito
 
 ### Descrição
-Esse projeto me rendeu grandes aprendizados devido as dificuldades que surgiram durante o seu desenvolvimento:
 
 #### Módulos
 Foi um dos primeiros projetos na qual utilizei a Modularização com ES6 Modules e a abordagem de cada módulo possuir uma função/ação específica. 
 
-Encontrei dificuldades ao criar esse projeto usando ES6 Modules e o Webpack devido a utilização de um único bundle no arquivo de configuração do webpack, que foi utilizado em diferentes páginas com scripts diferentes, originando conflitos no DOM e nas requisições. 
+Encontrei dificuldades ao usar o ES6 Modules e o Webpack devido a configuração de um único bundle, que foi utilizado em diferentes páginas com scripts e elementos diferentes, originando conflitos no DOM e nas requisições. 
 
 A solução para o problema descrito acima foi o recurso de Code Splitting (Divisão de código). Esse recurso permite a divisão do código em vários bundles que podem ser carregados sob demanda. Existem diversas abordagens para a divisão de código e uma das que foram implementadas inicialmente neste projeto foi a divisão do código em diferentes entry points que foram carregados manualmente em páginas distintas. 
+```js
+  module.exports = {
+    entry: {
+      main: './src/main.js',
+      events: './src/gitHubUserEvents.js',
+      followers: './src/searchGitHubUserFollowers.js',
+      following: './src/searchGitHubUserFollowing.js',
+      repos: './src/searchGitHubUserRepos.js'
+    },
+    output: {
+      path: path.resolve(__dirname, 'public', 'assets', 'js'),
+      filename: '[name].bundle.js'
+    }
+  }
+```
 
-No entanto, a solução inicial foi substituída por outra estratégia devido a dificuldade de carregar os bundles manualmente e a falta de flexibilidade, caso outros entry points fossem adicionados. Sendo assim, a outra técnica de divisão de código utilizada foram as Dynamic Imports (Importações Dinâmicas) que permitem carregar um módulo em qualquer lugar do código. 
+No entanto, a solução inicial foi substituída por outra estratégia devido a dificuldade de carregar os bundles manualmente e por falta de flexibilidade. Sendo assim, a outra técnica de divisão de código utilizada foram as Dynamic Imports (Importações Dinâmicas) que permitem carregar um módulo em qualquer lugar do código. 
 
 Dessa forma, foi criado um módulo específico para carregar os outros módulos sob demanda, realizando uma importação condicional de acordo com a url da página:
 ```js
